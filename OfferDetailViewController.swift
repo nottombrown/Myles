@@ -10,6 +10,15 @@ import Foundation
 
 class OfferDetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
+//    
+//    let offer: Offer
+//
+//    
+//    init(offer: Offer) {
+//        self.offer = offer
+//
+//    }
+    
     
     
 }

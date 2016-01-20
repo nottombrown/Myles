@@ -9,6 +9,7 @@
 import Foundation
 import Parse
 
+// TODO: rename to OfferTableViewController
 class OffersTableViewController: PFQueryTableViewController {
 
     
@@ -19,6 +20,16 @@ class OffersTableViewController: PFQueryTableViewController {
 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 84.0
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let offer = objectAtIndexPath(indexPath)
+        // Present with: http://stackoverflow.com/questions/27326183/presenting-a-view-controller-programmatically-in-swift
+     
+        
+        let offerDetailViewController = OfferDetailViewController()
+        
+        navigationController?.pushViewController(offerDetailViewController, animated: true)
     }
     
     override func queryForTable() -> PFQuery {
