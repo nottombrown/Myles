@@ -20,6 +20,11 @@ class OffersTableViewController: PFQueryTableViewController {
     override func queryForTable() -> PFQuery {
         let query = Offer.query()
         query?.addAscendingOrder("goodness")
+//        let i = PFInstallation.currentInstallation()
+        
+//        let q2 = CreditApplication.query()
+//        q2?.whereKey("installation", equalTo: i.objectId!)
+//        query?.whereKey("objectId", doesNotMatchKey: "offer", inQuery: q2!)
         
         return query!
     }
@@ -38,7 +43,7 @@ class OffersTableViewController: PFQueryTableViewController {
         let offer = object as! Offer
         
         // 3 print our image loading progress
-        cell.cardImage.file = offer.image
+//        cell.cardImage.file = offer.image
 //        cell.cardImage.loadInBackground(nil) { percent in
 ////            cell.progressView.progress = Float(percent)*0.01
 ////            println("\(percent)%")
@@ -51,12 +56,10 @@ class OffersTableViewController: PFQueryTableViewController {
         print(cell)
 
         cell.nameLabel.text = offer.name
-        cell.rewardLabel.text = offer.reward!
+//        cell.rewardLabel.text = offer.reward!
         
         return cell
     }
-    
-    override func table
     
     
 }

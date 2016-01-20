@@ -16,8 +16,9 @@ class CreditApplicationsTableViewController: PFQueryTableViewController {
     
     override func queryForTable() -> PFQuery {
         let query = CreditApplication.query()
-        let i = PFInstallation.currentInstallation()
-        query?.whereKey("installation", equalTo: i.objectId!)
+        print(PFUser.currentUser()!.objectId!)
+//        let i = PFInstallation.currentInstallation()
+//        query?.whereKey("installation", equalTo: i.objectId!)
         query?.whereKeyDoesNotExist("approvedAt")
         query?.whereKeyDoesNotExist("declinedAt")
         query?.addDescendingOrder("appliedAt")
@@ -26,7 +27,7 @@ class CreditApplicationsTableViewController: PFQueryTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.registerClass(CreditApplicationTableViewCell.self, forCellReuseIdentifier: "CreditCell")
+        self.tableView.registerNib(UINib(nibName: "CreditApplicationTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "CreditCell")
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject!) -> PFTableViewCell? {
