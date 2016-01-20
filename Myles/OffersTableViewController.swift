@@ -25,7 +25,7 @@ class OffersTableViewController: PFQueryTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Register the table view prototype cell
-        tableView.registerClass(OfferTableViewCell.self, forCellReuseIdentifier: "OfferCell")
+        tableView.registerNib(UINib(nibName: "OfferTableViewCell", bundle: nil), forCellReuseIdentifier: "OfferCell")
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject!) -> PFTableViewCell? {
@@ -36,16 +36,20 @@ class OffersTableViewController: PFQueryTableViewController {
         let offer = object as! Offer
         
         // 3 print our image loading progress
-        cell.cardImage.file = offer.image
-        cell.cardImage.loadInBackground(nil) { percent in
-//            cell.progressView.progress = Float(percent)*0.01
-//            println("\(percent)%")
-        }
+//        cell.cardImage.file = offer.image
+//        cell.cardImage.loadInBackground(nil) { percent in
+////            cell.progressView.progress = Float(percent)*0.01
+////            println("\(percent)%")
+//        }
         
         // 4
-        cell.nameLabel.text = offer.name
         
-        cell.rewardLabel.text = offer.reward
+        print(offer.name)
+        print(offer.reward)
+        print(cell)
+
+        cell.nameLabel.text = offer.name
+//        cell.rewardLabel.text = offer.reward!
         
         return cell
     }
