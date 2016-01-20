@@ -12,5 +12,6 @@ import Parse
 class OfferTableViewCell: PFTableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
-    
+    @IBOutlet weak var cardImage: PFImageView!
+    @IBOutlet weak var rewardLabel: UILabel!
 }
