@@ -24,7 +24,7 @@ class OfferDetailViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        self.title = offer.name
-        nameLabel.text = offer.name
+        title = offer.name
+        nameLabel.text = "\(offer.name!) Details"
     }
 }
