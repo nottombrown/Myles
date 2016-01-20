@@ -59,7 +59,7 @@
         <scene sceneID="gIz-Wm-ICv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oCE-Tf-Q9x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Offers" id="2hx-vI-MVu"/>
+                    <tabBarItem key="tabBarItem" title="Offers" image="money_bag_filled" id="2hx-vI-MVu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1XD-gM-w3e">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -108,7 +108,7 @@
         <scene sceneID="kDG-yK-qSo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2f6-3b-lZY" userLabel="Credit Applications" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Credit Applications" id="lby-UU-XbN" userLabel="Credit Applications"/>
+                    <tabBarItem key="tabBarItem" title="Credit Applications" image="card_in_use_filled" id="lby-UU-XbN" userLabel="Credit Applications"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IWF-Cd-1DT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -157,7 +157,7 @@
         <scene sceneID="N9F-H7-GZQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6cB-mY-yrA" userLabel="Profile" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="wd9-mT-FFF" userLabel="Profile"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="user_male_circle_filled" id="wd9-mT-FFF" userLabel="Profile"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xVC-Yj-2ym">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -173,4 +173,9 @@
             <point key="canvasLocation" x="1509" y="2327"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="card_in_use_filled" width="30" height="20"/>
+        <image name="money_bag_filled" width="26" height="29"/>
+        <image name="user_male_circle_filled" width="30" height="30"/>
+    </resources>
 </document>
