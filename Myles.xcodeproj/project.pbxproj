@@ -30,6 +30,9 @@
 		82D3470D1C4FFD1800253FA1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D3470C1C4FFD1800253FA1 /* SystemConfiguration.framework */; };
 		82D3470F1C4FFD2000253FA1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D3470E1C4FFD2000253FA1 /* libz.tbd */; };
 		82D347111C4FFD2B00253FA1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D347101C4FFD2B00253FA1 /* libsqlite3.tbd */; };
+		82D347131C50004300253FA1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D347121C50004300253FA1 /* ParseUI.framework */; };
+		82D347141C50004300253FA1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D347121C50004300253FA1 /* ParseUI.framework */; };
+		82D347151C50004300253FA1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D347121C50004300253FA1 /* ParseUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,10 @@
 		82D3470C1C4FFD1800253FA1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		82D3470E1C4FFD2000253FA1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		82D347101C4FFD2B00253FA1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		82D347121C50004300253FA1 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		82D347161C50009400253FA1 /* Myles-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Myles-Bridging-Header.h"; sourceTree = "<group>"; };
+		82D347171C50009400253FA1 /* MylesTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MylesTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		82D347181C50009400253FA1 /* MylesUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MylesUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +101,7 @@
 				82D346FF1C4FFCE300253FA1 /* AudioToolbox.framework in Frameworks */,
 				82D346FB1C4FFCAB00253FA1 /* Parse.framework in Frameworks */,
 				82D346F81C4FFCAB00253FA1 /* Bolts.framework in Frameworks */,
+				82D347131C50004300253FA1 /* ParseUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D347141C50004300253FA1 /* ParseUI.framework in Frameworks */,
 				82D346FC1C4FFCAB00253FA1 /* Parse.framework in Frameworks */,
 				82D346F91C4FFCAB00253FA1 /* Bolts.framework in Frameworks */,
 			);
@@ -110,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D347151C50004300253FA1 /* ParseUI.framework in Frameworks */,
 				82D346FD1C4FFCAB00253FA1 /* Parse.framework in Frameworks */,
 				82D346FA1C4FFCAB00253FA1 /* Bolts.framework in Frameworks */,
 			);
@@ -126,6 +136,9 @@
 				82B944B01C4F39780017A60B /* MylesTests */,
 				82B944BB1C4F39780017A60B /* MylesUITests */,
 				82B9449A1C4F39780017A60B /* Products */,
+				82D347161C50009400253FA1 /* Myles-Bridging-Header.h */,
+				82D347171C50009400253FA1 /* MylesTests-Bridging-Header.h */,
+				82D347181C50009400253FA1 /* MylesUITests-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +186,7 @@
 		82D346F51C4FFC9B00253FA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82D347121C50004300253FA1 /* ParseUI.framework */,
 				82D347101C4FFD2B00253FA1 /* libsqlite3.tbd */,
 				82D3470E1C4FFD2000253FA1 /* libz.tbd */,
 				82D3470C1C4FFD1800253FA1 /* SystemConfiguration.framework */,
@@ -461,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -469,6 +484,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tombarr.Myles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Myles-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -476,6 +493,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -484,6 +502,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tombarr.Myles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Myles-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -491,6 +510,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -499,6 +519,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tombarr.MylesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MylesTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Myles.app/Myles";
 			};
 			name = Debug;
@@ -507,6 +529,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -515,6 +538,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tombarr.MylesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MylesTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Myles.app/Myles";
 			};
 			name = Release;
@@ -522,6 +546,7 @@
 		82B944C81C4F39780017A60B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -530,6 +555,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tombarr.MylesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MylesUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_TARGET_NAME = Myles;
 				USES_XCTRUNNER = YES;
 			};
@@ -538,6 +565,7 @@
 		82B944C91C4F39780017A60B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -546,6 +574,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tombarr.MylesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MylesUITests-Bridging-Header.h";
 				TEST_TARGET_NAME = Myles;
 				USES_XCTRUNNER = YES;
 			};
