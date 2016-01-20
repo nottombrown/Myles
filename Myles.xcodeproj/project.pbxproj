@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77B9DE611C5008A200D2F174 /* CreditApplicationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B9DE601C5008A200D2F174 /* CreditApplicationsTableViewController.swift */; };
+		77B9DE631C5008AB00D2F174 /* CreditApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B9DE621C5008AB00D2F174 /* CreditApplication.swift */; };
+		77B9DE651C50093A00D2F174 /* CreditApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B9DE641C50093A00D2F174 /* CreditApplicationTableViewCell.swift */; };
 		82B9449D1C4F39780017A60B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9449C1C4F39780017A60B /* AppDelegate.swift */; };
 		82B944A21C4F39780017A60B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B944A01C4F39780017A60B /* Main.storyboard */; };
 		82B944A41C4F39780017A60B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B944A31C4F39780017A60B /* Assets.xcassets */; };
@@ -56,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77B9DE601C5008A200D2F174 /* CreditApplicationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditApplicationsTableViewController.swift; sourceTree = "<group>"; };
+		77B9DE621C5008AB00D2F174 /* CreditApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditApplication.swift; sourceTree = "<group>"; };
+		77B9DE641C50093A00D2F174 /* CreditApplicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditApplicationTableViewCell.swift; sourceTree = "<group>"; };
 		82B944991C4F39780017A60B /* Myles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Myles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B9449C1C4F39780017A60B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B944A11C4F39780017A60B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -166,7 +172,9 @@
 				82B944A01C4F39780017A60B /* Main.storyboard */,
 				82F1DCC31C501532008C7FFB /* OfferTableViewCell.xib */,
 				82F1DCBC1C50024A008C7FFB /* OffersTableViewController.swift */,
+				77B9DE601C5008A200D2F174 /* CreditApplicationsTableViewController.swift */,
 				82F1DCC11C5003CE008C7FFB /* OfferTableViewCell.swift */,
+				77B9DE641C50093A00D2F174 /* CreditApplicationTableViewCell.swift */,
 				82B944A31C4F39780017A60B /* Assets.xcassets */,
 				82B944A51C4F39780017A60B /* LaunchScreen.storyboard */,
 				82B944A81C4F39780017A60B /* Info.plist */,
@@ -216,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				82F1DCBF1C5002E6008C7FFB /* Offer.swift */,
+				77B9DE621C5008AB00D2F174 /* CreditApplication.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -352,10 +361,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B9DE651C50093A00D2F174 /* CreditApplicationTableViewCell.swift in Sources */,
+				77B9DE611C5008A200D2F174 /* CreditApplicationsTableViewController.swift in Sources */,
 				82F1DCC01C5002E6008C7FFB /* Offer.swift in Sources */,
 				82F1DCC21C5003CE008C7FFB /* OfferTableViewCell.swift in Sources */,
 				82B9449D1C4F39780017A60B /* AppDelegate.swift in Sources */,
 				82F1DCBD1C50024A008C7FFB /* OffersTableViewController.swift in Sources */,
+				77B9DE631C5008AB00D2F174 /* CreditApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
