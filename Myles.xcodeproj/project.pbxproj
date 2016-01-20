@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		82B9449D1C4F39780017A60B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9449C1C4F39780017A60B /* AppDelegate.swift */; };
-		82B9449F1C4F39780017A60B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9449E1C4F39780017A60B /* ViewController.swift */; };
 		82B944A21C4F39780017A60B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B944A01C4F39780017A60B /* Main.storyboard */; };
 		82B944A41C4F39780017A60B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B944A31C4F39780017A60B /* Assets.xcassets */; };
 		82B944A71C4F39780017A60B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B944A51C4F39780017A60B /* LaunchScreen.storyboard */; };
@@ -33,6 +32,9 @@
 		82D347131C50004300253FA1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D347121C50004300253FA1 /* ParseUI.framework */; };
 		82D347141C50004300253FA1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D347121C50004300253FA1 /* ParseUI.framework */; };
 		82D347151C50004300253FA1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D347121C50004300253FA1 /* ParseUI.framework */; };
+		82F1DCBD1C50024A008C7FFB /* OffersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F1DCBC1C50024A008C7FFB /* OffersTableViewController.swift */; };
+		82F1DCC01C5002E6008C7FFB /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F1DCBF1C5002E6008C7FFB /* Offer.swift */; };
+		82F1DCC21C5003CE008C7FFB /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F1DCC11C5003CE008C7FFB /* OfferTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +57,6 @@
 /* Begin PBXFileReference section */
 		82B944991C4F39780017A60B /* Myles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Myles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B9449C1C4F39780017A60B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		82B9449E1C4F39780017A60B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		82B944A11C4F39780017A60B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82B944A31C4F39780017A60B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82B944A61C4F39780017A60B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,6 +83,9 @@
 		82D347161C50009400253FA1 /* Myles-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Myles-Bridging-Header.h"; sourceTree = "<group>"; };
 		82D347171C50009400253FA1 /* MylesTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MylesTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		82D347181C50009400253FA1 /* MylesUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MylesUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		82F1DCBC1C50024A008C7FFB /* OffersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersTableViewController.swift; sourceTree = "<group>"; };
+		82F1DCBF1C5002E6008C7FFB /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		82F1DCC11C5003CE008C7FFB /* OfferTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,9 +159,11 @@
 		82B9449B1C4F39780017A60B /* Myles */ = {
 			isa = PBXGroup;
 			children = (
+				82F1DCBE1C5002CF008C7FFB /* Models */,
 				82B9449C1C4F39780017A60B /* AppDelegate.swift */,
-				82B9449E1C4F39780017A60B /* ViewController.swift */,
 				82B944A01C4F39780017A60B /* Main.storyboard */,
+				82F1DCBC1C50024A008C7FFB /* OffersTableViewController.swift */,
+				82F1DCC11C5003CE008C7FFB /* OfferTableViewCell.swift */,
 				82B944A31C4F39780017A60B /* Assets.xcassets */,
 				82B944A51C4F39780017A60B /* LaunchScreen.storyboard */,
 				82B944A81C4F39780017A60B /* Info.plist */,
@@ -201,6 +207,14 @@
 				82D346F71C4FFCAB00253FA1 /* Parse.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82F1DCBE1C5002CF008C7FFB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				82F1DCBF1C5002E6008C7FFB /* Offer.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,8 +348,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82B9449F1C4F39780017A60B /* ViewController.swift in Sources */,
+				82F1DCC01C5002E6008C7FFB /* Offer.swift in Sources */,
+				82F1DCC21C5003CE008C7FFB /* OfferTableViewCell.swift in Sources */,
 				82B9449D1C4F39780017A60B /* AppDelegate.swift in Sources */,
+				82F1DCBD1C50024A008C7FFB /* OffersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
