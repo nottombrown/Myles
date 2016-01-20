@@ -10,15 +10,21 @@ import Foundation
 
 class OfferDetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
-//    
-//    let offer: Offer
-//
-//    
-//    init(offer: Offer) {
-//        self.offer = offer
-//
-//    }
     
+    let offer: Offer
     
+    init(offer: Offer) {
+        self.offer = offer
+        super.init(nibName: nil, bundle: nil)
+    }
     
+    required init(coder: NSCoder) {
+        // http://stackoverflow.com/questions/25126295/swift-class-does-not-implement-its-superclasss-required-members
+        fatalError("NSCoding not supported")
+    }
+    
+    override func viewDidLoad() {
+        self.title = offer.name
+        nameLabel.text = offer.name
+    }
 }
