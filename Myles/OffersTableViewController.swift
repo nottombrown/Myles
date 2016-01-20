@@ -10,17 +10,24 @@ import Foundation
 import Parse
 
 class OffersTableViewController: PFQueryTableViewController {
+
     override func viewWillAppear(animated: Bool) {
         print("OffersTVC")
         loadObjects()
     }
+
     
     override func queryForTable() -> PFQuery {
         let query = Offer.query()
         return query!
     }
-
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Register the table view prototype cell
+        tableView.registerClass(OfferTableViewCell.self, forCellReuseIdentifier: "OfferCell")
+    }
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject!) -> PFTableViewCell? {
         // 1
         let cell = tableView.dequeueReusableCellWithIdentifier("OfferCell", forIndexPath: indexPath) as! OfferTableViewCell
