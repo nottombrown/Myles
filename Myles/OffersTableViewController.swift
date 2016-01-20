@@ -11,11 +11,15 @@ import Parse
 
 class OffersTableViewController: PFQueryTableViewController {
 
+    
     override func viewWillAppear(animated: Bool) {
         print("OffersTVC")
         loadObjects()
     }
 
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 84.0
+    }
     
     override func queryForTable() -> PFQuery {
         let query = Offer.query()
@@ -42,24 +46,20 @@ class OffersTableViewController: PFQueryTableViewController {
         // 2
         let offer = object as! Offer
         
-        // 3 print our image loading progress
-//        cell.cardImage.file = offer.image
-//        cell.cardImage.loadInBackground(nil) { percent in
-////            cell.progressView.progress = Float(percent)*0.01
-////            println("\(percent)%")
-//        }
-        
-        // 4
+        // 3
+        cell.cardImage.file = offer.image
+        cell.cardImage.loadInBackground(nil)
         
         print(offer.name)
         print(offer.reward)
         print(cell)
 
         cell.nameLabel.text = offer.name
-//        cell.rewardLabel.text = offer.reward!
+        cell.rewardLabel.text = "\(offer.reward!) Reward"
         
         return cell
     }
+    
     
     
 }
