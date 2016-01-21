@@ -12,16 +12,6 @@ import Parse
 // TODO: rename to OfferTableViewController
 class OffersTableViewController: MylesTableViewController {
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let offer = objectAtIndexPath(indexPath) as! Offer
-        // Present with: http://stackoverflow.com/questions/27326183/presenting-a-view-controller-programmatically-in-swift
-        
-        
-        let offerDetailViewController = OfferDetailViewController(offer: offer)
-        
-        navigationController?.pushViewController(offerDetailViewController, animated: true)
-    }
-    
     override func queryForTable() -> PFQuery {
         let query = Offer.query()
         query?.addAscendingOrder("goodness")
@@ -41,13 +31,11 @@ class OffersTableViewController: MylesTableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject!) -> PFTableViewCell? {
-        // 1
+
         let cell = tableView.dequeueReusableCellWithIdentifier("OfferCell", forIndexPath: indexPath) as! OfferTableViewCell
         
-        // 2
         let offer = object as! Offer
-        
-        // 3
+
         cell.cardImage.file = offer.image
         cell.cardImage.loadInBackground(nil)
         
@@ -57,6 +45,9 @@ class OffersTableViewController: MylesTableViewController {
         return cell
     }
     
-    
-    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let offer = objectAtIndexPath(indexPath) as! Offer
+        let offerDetailViewController = OfferDetailViewController(offer: offer)
+        navigationController?.pushViewController(offerDetailViewController, animated: true)
+    }
 }

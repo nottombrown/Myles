@@ -10,6 +10,7 @@ import Foundation
 import Parse
 
 class CreditApplicationsTableViewController: MylesTableViewController {
+
     override func queryForTable() -> PFQuery {
         let query = CreditApplication.query()
         //        print(PFUser.currentUser()!.objectId!)
@@ -28,17 +29,14 @@ class CreditApplicationsTableViewController: MylesTableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject!) -> PFTableViewCell? {
         
-        // 1
         let cell = tableView.dequeueReusableCellWithIdentifier("CreditCell", forIndexPath: indexPath) as! CreditApplicationTableViewCell
         
-        // 2
         let creditApp = object as! CreditApplication
         
         cell.appliedAtLabel.text = String(creditApp.appliedAt!)
         
         if let offer = creditApp.offer {
             
-            // 3 print our image loading progress
             cell.cardImage.file = offer.image
             cell.cardImage.loadInBackground(nil)
             
@@ -48,5 +46,11 @@ class CreditApplicationsTableViewController: MylesTableViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let creditApp = objectAtIndexPath(indexPath) as! CreditApplication
+        let creditApplicationDetailViewController = CreditApplicationDetailViewController(creditApplication: creditApp)
+        navigationController?.pushViewController(creditApplicationDetailViewController, animated: true)
     }
 }
