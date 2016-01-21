@@ -9,7 +9,13 @@
 import Foundation
 import Parse
 
+// Shared functionality across all table view controllers
 class MylesTableViewController: PFQueryTableViewController {
+
+    override func viewWillAppear(animated: Bool) {
+        loadObjects()
+    }
+    
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 84.0
     }

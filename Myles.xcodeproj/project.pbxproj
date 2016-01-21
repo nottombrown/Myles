@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		77B9DE611C5008A200D2F174 /* CreditApplicationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B9DE601C5008A200D2F174 /* CreditApplicationsTableViewController.swift */; };
 		77B9DE631C5008AB00D2F174 /* CreditApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B9DE621C5008AB00D2F174 /* CreditApplication.swift */; };
 		77B9DE651C50093A00D2F174 /* CreditApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B9DE641C50093A00D2F174 /* CreditApplicationTableViewCell.swift */; };
 		77B9DE671C50194A00D2F174 /* CreditApplicationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77B9DE661C50194A00D2F174 /* CreditApplicationTableViewCell.xib */; };
@@ -43,6 +42,8 @@
 		82F1DCC81C5023A4008C7FFB /* OfferDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82F1DCC71C5023A4008C7FFB /* OfferDetailView.xib */; };
 		82F1DCCC1C50240F008C7FFB /* OfferDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F1DCCB1C50240F008C7FFB /* OfferDetailViewController.swift */; };
 		82F1DCD01C505935008C7FFB /* MylesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F1DCCF1C505935008C7FFB /* MylesTableViewController.swift */; };
+		82F1DCD21C505ABE008C7FFB /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F1DCD11C505ABE008C7FFB /* ProfileTableViewController.swift */; };
+		82F1DCD41C505AE2008C7FFB /* CreditApplicationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F1DCD31C505AE2008C7FFB /* CreditApplicationsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +64,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		77B9DE601C5008A200D2F174 /* CreditApplicationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditApplicationsTableViewController.swift; sourceTree = "<group>"; };
 		77B9DE621C5008AB00D2F174 /* CreditApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditApplication.swift; sourceTree = "<group>"; };
 		77B9DE641C50093A00D2F174 /* CreditApplicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditApplicationTableViewCell.swift; sourceTree = "<group>"; };
 		77B9DE661C50194A00D2F174 /* CreditApplicationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditApplicationTableViewCell.xib; sourceTree = "<group>"; };
@@ -100,8 +100,10 @@
 		82F1DCC11C5003CE008C7FFB /* OfferTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferTableViewCell.swift; sourceTree = "<group>"; };
 		82F1DCC31C501532008C7FFB /* OfferTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferTableViewCell.xib; sourceTree = "<group>"; };
 		82F1DCC71C5023A4008C7FFB /* OfferDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OfferDetailView.xib; path = ../OfferDetailView.xib; sourceTree = "<group>"; };
-		82F1DCCB1C50240F008C7FFB /* OfferDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferDetailViewController.swift; sourceTree = "<group>"; };
+		82F1DCCB1C50240F008C7FFB /* OfferDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OfferDetailViewController.swift; path = ../OfferDetailViewController.swift; sourceTree = "<group>"; };
 		82F1DCCF1C505935008C7FFB /* MylesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MylesTableViewController.swift; sourceTree = "<group>"; };
+		82F1DCD11C505ABE008C7FFB /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		82F1DCD31C505AE2008C7FFB /* CreditApplicationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreditApplicationsTableViewController.swift; path = ../CreditApplicationsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +153,6 @@
 		82B944901C4F39770017A60B = {
 			isa = PBXGroup;
 			children = (
-				82F1DCCB1C50240F008C7FFB /* OfferDetailViewController.swift */,
 				82D346F51C4FFC9B00253FA1 /* Frameworks */,
 				82B9449B1C4F39780017A60B /* Myles */,
 				82B944B01C4F39780017A60B /* MylesTests */,
@@ -238,9 +239,11 @@
 		82F1DCCD1C5058EE008C7FFB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				82F1DCCB1C50240F008C7FFB /* OfferDetailViewController.swift */,
 				82F1DCBC1C50024A008C7FFB /* OffersTableViewController.swift */,
+				82F1DCD31C505AE2008C7FFB /* CreditApplicationsTableViewController.swift */,
 				82F1DCCF1C505935008C7FFB /* MylesTableViewController.swift */,
-				77B9DE601C5008A200D2F174 /* CreditApplicationsTableViewController.swift */,
+				82F1DCD11C505ABE008C7FFB /* ProfileTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -391,11 +394,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82F1DCD21C505ABE008C7FFB /* ProfileTableViewController.swift in Sources */,
 				77B9DE651C50093A00D2F174 /* CreditApplicationTableViewCell.swift in Sources */,
-				77B9DE611C5008A200D2F174 /* CreditApplicationsTableViewController.swift in Sources */,
 				82F1DCC01C5002E6008C7FFB /* Offer.swift in Sources */,
 				82F1DCC21C5003CE008C7FFB /* OfferTableViewCell.swift in Sources */,
 				82B9449D1C4F39780017A60B /* AppDelegate.swift in Sources */,
+				82F1DCD41C505AE2008C7FFB /* CreditApplicationsTableViewController.swift in Sources */,
 				82F1DCBD1C50024A008C7FFB /* OffersTableViewController.swift in Sources */,
 				82F1DCD01C505935008C7FFB /* MylesTableViewController.swift in Sources */,
 				82F1DCCC1C50240F008C7FFB /* OfferDetailViewController.swift in Sources */,

@@ -12,11 +12,6 @@ import Parse
 // TODO: rename to OfferTableViewController
 class OffersTableViewController: MylesTableViewController {
     
-    
-    override func viewWillAppear(animated: Bool) {
-        loadObjects()
-    }
-    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let offer = objectAtIndexPath(indexPath) as! Offer
         // Present with: http://stackoverflow.com/questions/27326183/presenting-a-view-controller-programmatically-in-swift
