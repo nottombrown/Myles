@@ -27,7 +27,6 @@ class CreditApplicationsTableViewController: PFQueryTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("LOADED")
         self.tableView.registerNib(UINib(nibName: "CreditApplicationTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "CreditCell")
     }
     
@@ -37,10 +36,12 @@ class CreditApplicationsTableViewController: PFQueryTableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("CreditCell", forIndexPath: indexPath) as! CreditApplicationTableViewCell
         
         // 2
-        let app = object as! CreditApplication
+        let creditApp = object as! CreditApplication
         
-        if let offer = app.offer {
+        cell.appliedAtLabel.text = String(creditApp.appliedAt)
         
+        if let offer = creditApp.offer {
+            
             // 3 print our image loading progress
             cell.cardImage.file = offer.image
             cell.cardImage.loadInBackground(nil)
@@ -48,8 +49,6 @@ class CreditApplicationsTableViewController: PFQueryTableViewController {
             print(offer.name)
             
             cell.nameLabel.text = offer.name
-            
-            cell.appliedAtLabel.text = String(app.appliedAt)
         }
         
         return cell
