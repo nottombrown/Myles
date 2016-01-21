@@ -42,6 +42,7 @@
 		82F1DCC41C501532008C7FFB /* OfferTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82F1DCC31C501532008C7FFB /* OfferTableViewCell.xib */; };
 		82F1DCC81C5023A4008C7FFB /* OfferDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82F1DCC71C5023A4008C7FFB /* OfferDetailView.xib */; };
 		82F1DCCC1C50240F008C7FFB /* OfferDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F1DCCB1C50240F008C7FFB /* OfferDetailViewController.swift */; };
+		82F1DCD01C505935008C7FFB /* MylesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F1DCCF1C505935008C7FFB /* MylesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		82F1DCC31C501532008C7FFB /* OfferTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferTableViewCell.xib; sourceTree = "<group>"; };
 		82F1DCC71C5023A4008C7FFB /* OfferDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OfferDetailView.xib; path = ../OfferDetailView.xib; sourceTree = "<group>"; };
 		82F1DCCB1C50240F008C7FFB /* OfferDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferDetailViewController.swift; sourceTree = "<group>"; };
+		82F1DCCF1C505935008C7FFB /* MylesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MylesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,13 +179,8 @@
 				82F1DCBE1C5002CF008C7FFB /* Models */,
 				82B9449C1C4F39780017A60B /* AppDelegate.swift */,
 				82B944A01C4F39780017A60B /* Main.storyboard */,
-				82F1DCC31C501532008C7FFB /* OfferTableViewCell.xib */,
-				82F1DCBC1C50024A008C7FFB /* OffersTableViewController.swift */,
-				77B9DE601C5008A200D2F174 /* CreditApplicationsTableViewController.swift */,
-				82F1DCC11C5003CE008C7FFB /* OfferTableViewCell.swift */,
-				77B9DE641C50093A00D2F174 /* CreditApplicationTableViewCell.swift */,
-				77B9DE661C50194A00D2F174 /* CreditApplicationTableViewCell.xib */,
-				82F1DCC71C5023A4008C7FFB /* OfferDetailView.xib */,
+				82F1DCCE1C505904008C7FFB /* Views */,
+				82F1DCCD1C5058EE008C7FFB /* Controllers */,
 				82B944A31C4F39780017A60B /* Assets.xcassets */,
 				82B944A51C4F39780017A60B /* LaunchScreen.storyboard */,
 				82B944A81C4F39780017A60B /* Info.plist */,
@@ -236,6 +233,28 @@
 				77B9DE621C5008AB00D2F174 /* CreditApplication.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		82F1DCCD1C5058EE008C7FFB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				82F1DCBC1C50024A008C7FFB /* OffersTableViewController.swift */,
+				82F1DCCF1C505935008C7FFB /* MylesTableViewController.swift */,
+				77B9DE601C5008A200D2F174 /* CreditApplicationsTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		82F1DCCE1C505904008C7FFB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				82F1DCC31C501532008C7FFB /* OfferTableViewCell.xib */,
+				82F1DCC11C5003CE008C7FFB /* OfferTableViewCell.swift */,
+				77B9DE641C50093A00D2F174 /* CreditApplicationTableViewCell.swift */,
+				77B9DE661C50194A00D2F174 /* CreditApplicationTableViewCell.xib */,
+				82F1DCC71C5023A4008C7FFB /* OfferDetailView.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +397,7 @@
 				82F1DCC21C5003CE008C7FFB /* OfferTableViewCell.swift in Sources */,
 				82B9449D1C4F39780017A60B /* AppDelegate.swift in Sources */,
 				82F1DCBD1C50024A008C7FFB /* OffersTableViewController.swift in Sources */,
+				82F1DCD01C505935008C7FFB /* MylesTableViewController.swift in Sources */,
 				82F1DCCC1C50240F008C7FFB /* OfferDetailViewController.swift in Sources */,
 				77B9DE631C5008AB00D2F174 /* CreditApplication.swift in Sources */,
 			);

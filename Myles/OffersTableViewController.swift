@@ -10,15 +10,11 @@ import Foundation
 import Parse
 
 // TODO: rename to OfferTableViewController
-class OffersTableViewController: PFQueryTableViewController {
+class OffersTableViewController: MylesTableViewController {
     
     
     override func viewWillAppear(animated: Bool) {
         loadObjects()
-    }
-    
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 84.0
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

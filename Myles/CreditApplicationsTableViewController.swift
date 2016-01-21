@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 
-class CreditApplicationsTableViewController: PFQueryTableViewController {
+class CreditApplicationsTableViewController: MylesTableViewController {
     override func viewWillAppear(animated: Bool) {
         loadObjects()
     }
@@ -38,7 +38,7 @@ class CreditApplicationsTableViewController: PFQueryTableViewController {
         // 2
         let creditApp = object as! CreditApplication
         
-        cell.appliedAtLabel.text = String(creditApp.appliedAt)
+        cell.appliedAtLabel.text = String(creditApp.appliedAt!)
         
         if let offer = creditApp.offer {
             
