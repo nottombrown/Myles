@@ -15,8 +15,8 @@ class CreditApplicationsTableViewController: MylesTableViewController {
         //        print(PFUser.currentUser()!.objectId!)
         //        let i = PFInstallation.currentInstallation()
         //        query?.whereKey("installation", equalTo: i.objectId!)
-        //        query?.whereKeyDoesNotExist("approvedAt")
-        //        query?.whereKeyDoesNotExist("declinedAt")
+        query?.whereKeyDoesNotExist("approvedAt")
+        query?.whereKeyDoesNotExist("declinedAt")
         query?.addDescendingOrder("appliedAt")
         return query!
     }
