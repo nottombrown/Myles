@@ -14,7 +14,6 @@ class OffersTableViewController: PFQueryTableViewController {
     
     
     override func viewWillAppear(animated: Bool) {
-        print("OffersTVC")
         loadObjects()
     }
     
@@ -60,10 +59,6 @@ class OffersTableViewController: PFQueryTableViewController {
         // 3
         cell.cardImage.file = offer.image
         cell.cardImage.loadInBackground(nil)
-        
-        print(offer.name)
-        print(offer.reward)
-        print(cell)
         
         cell.nameLabel.text = offer.name
         cell.rewardLabel.text = "\(offer.reward!) Reward"

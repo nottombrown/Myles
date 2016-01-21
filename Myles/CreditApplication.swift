@@ -16,6 +16,8 @@ extension CreditApplication: PFSubclassing {
     @NSManaged var image: PFFile
     @NSManaged var name: String?
     @NSManaged var reward: String?
+    @NSManaged var appliedAt: NSDate?
+    @NSManaged var offer: Offer?
     
     // Table view delegate methods here
     //1

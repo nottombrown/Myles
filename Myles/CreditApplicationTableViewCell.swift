@@ -11,6 +11,7 @@ import Parse
 
 class CreditApplicationTableViewCell: PFTableViewCell {
 
+    @IBOutlet weak var appliedAtLabel: UILabel!
     @IBOutlet weak var rewardLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cardImage: PFImageView!
