@@ -8,14 +8,7 @@
 
 import Foundation
 
-class CreditApplicationDetailViewController: UIViewController {
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var approvedButton: UIButton!
-    @IBOutlet weak var declinedButton: UIButton!
-    @IBOutlet weak var deliveredButton: UIButton!
-    @IBOutlet weak var winButton: UIButton!
-    @IBOutlet weak var loseButton: UIButton!
-    @IBOutlet weak var canceledButton: UIButton!
+class CreditApplicationDetailViewController: UIViewController, CreditApplicationPendingDelegate, CreditApplicationApprovedDelegate {
     
     let creditApplication: CreditApplication
     
@@ -29,22 +22,21 @@ class CreditApplicationDetailViewController: UIViewController {
         fatalError("NSCoding not supported")
     }
     
-    @IBAction func approved(sender: AnyObject) {
-        creditApplication["approvedAt"] = NSDate()
-        creditApplication.saveEventually()
-        // move to delivered
-    }
-    
-    @IBAction func declined(sender: AnyObject) {
+    func creditApplicationDeclined() {
         creditApplication["declinedAt"] = NSDate()
         creditApplication.saveEventually()
-        // move to initial
     }
-    @IBAction func delivered(sender: AnyObject) {
+    
+    func creditApplicationApproved() {
+        creditApplication["approvedAt"] = NSDate()
+        creditApplication.saveEventually()
+    }
+    
+    func creditApplicationDelivered() {
         creditApplication["deliveredAt"] = NSDate()
         creditApplication.saveEventually()
-        // move to bonus
     }
+    
     @IBAction func won(sender: AnyObject) {
         creditApplication["hitBonusAt"] = NSDate()
         creditApplication.saveEventually()
@@ -61,8 +53,11 @@ class CreditApplicationDetailViewController: UIViewController {
         // move to end state
     }
     
+    func setCorrectView() {
+    }
+    
     override func viewDidLoad() {
         title = creditApplication.offer?.name
-        nameLabel.text = "\(creditApplication.offer?.name!) Details"
+        self.setCorrectView()
     }
 }

@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		772E90DF1C56A2EA004CF542 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E90DE1C56A2EA004CF542 /* User.swift */; };
+		776BA29B1C56AE2C00AB2995 /* CreditApplicationPending.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776BA29A1C56AE2C00AB2995 /* CreditApplicationPending.xib */; };
+		776BA29D1C56AE4C00AB2995 /* CreditApplicationDelivered.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776BA29C1C56AE4C00AB2995 /* CreditApplicationDelivered.xib */; };
+		776BA29F1C56AE6A00AB2995 /* CreditApplicationApproved.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776BA29E1C56AE6A00AB2995 /* CreditApplicationApproved.xib */; };
+		776BA2A11C56AEB100AB2995 /* CreditApplicationLive.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776BA2A01C56AEB100AB2995 /* CreditApplicationLive.xib */; };
+		776BA2A31C56AEC400AB2995 /* CreditApplicationCanceled.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776BA2A21C56AEC400AB2995 /* CreditApplicationCanceled.xib */; };
+		776BA2A51C56AEE800AB2995 /* CreditApplicationPending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776BA2A41C56AEE800AB2995 /* CreditApplicationPending.swift */; };
 		77B9DE631C5008AB00D2F174 /* CreditApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B9DE621C5008AB00D2F174 /* CreditApplication.swift */; };
 		77B9DE651C50093A00D2F174 /* CreditApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B9DE641C50093A00D2F174 /* CreditApplicationTableViewCell.swift */; };
 		77B9DE671C50194A00D2F174 /* CreditApplicationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77B9DE661C50194A00D2F174 /* CreditApplicationTableViewCell.xib */; };
+		77CBD6181C56B62100CD377B /* CreditApplicationApproved.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBD6171C56B62100CD377B /* CreditApplicationApproved.swift */; };
 		82B9449D1C4F39780017A60B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9449C1C4F39780017A60B /* AppDelegate.swift */; };
 		82B944A21C4F39780017A60B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B944A01C4F39780017A60B /* Main.storyboard */; };
 		82B944A41C4F39780017A60B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B944A31C4F39780017A60B /* Assets.xcassets */; };
@@ -68,9 +75,16 @@
 
 /* Begin PBXFileReference section */
 		772E90DE1C56A2EA004CF542 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		776BA29A1C56AE2C00AB2995 /* CreditApplicationPending.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditApplicationPending.xib; sourceTree = "<group>"; };
+		776BA29C1C56AE4C00AB2995 /* CreditApplicationDelivered.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditApplicationDelivered.xib; sourceTree = "<group>"; };
+		776BA29E1C56AE6A00AB2995 /* CreditApplicationApproved.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditApplicationApproved.xib; sourceTree = "<group>"; };
+		776BA2A01C56AEB100AB2995 /* CreditApplicationLive.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditApplicationLive.xib; sourceTree = "<group>"; };
+		776BA2A21C56AEC400AB2995 /* CreditApplicationCanceled.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditApplicationCanceled.xib; sourceTree = "<group>"; };
+		776BA2A41C56AEE800AB2995 /* CreditApplicationPending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditApplicationPending.swift; sourceTree = "<group>"; };
 		77B9DE621C5008AB00D2F174 /* CreditApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditApplication.swift; sourceTree = "<group>"; };
 		77B9DE641C50093A00D2F174 /* CreditApplicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditApplicationTableViewCell.swift; sourceTree = "<group>"; };
 		77B9DE661C50194A00D2F174 /* CreditApplicationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditApplicationTableViewCell.xib; sourceTree = "<group>"; };
+		77CBD6171C56B62100CD377B /* CreditApplicationApproved.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditApplicationApproved.swift; sourceTree = "<group>"; };
 		82B944991C4F39780017A60B /* Myles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Myles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B9449C1C4F39780017A60B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B944A11C4F39780017A60B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -162,6 +176,20 @@
 				772E90DE1C56A2EA004CF542 /* User.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		776BA2991C56AE1500AB2995 /* CreditApplicationStates */ = {
+			isa = PBXGroup;
+			children = (
+				776BA29A1C56AE2C00AB2995 /* CreditApplicationPending.xib */,
+				776BA29C1C56AE4C00AB2995 /* CreditApplicationDelivered.xib */,
+				776BA29E1C56AE6A00AB2995 /* CreditApplicationApproved.xib */,
+				776BA2A01C56AEB100AB2995 /* CreditApplicationLive.xib */,
+				776BA2A21C56AEC400AB2995 /* CreditApplicationCanceled.xib */,
+				776BA2A41C56AEE800AB2995 /* CreditApplicationPending.swift */,
+				77CBD6171C56B62100CD377B /* CreditApplicationApproved.swift */,
+			);
+			name = CreditApplicationStates;
 			sourceTree = "<group>";
 		};
 		82B944901C4F39770017A60B = {
@@ -267,6 +295,7 @@
 		82F1DCCE1C505904008C7FFB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				776BA2991C56AE1500AB2995 /* CreditApplicationStates */,
 				82F1DCC31C501532008C7FFB /* OfferTableViewCell.xib */,
 				82F1DCC11C5003CE008C7FFB /* OfferTableViewCell.swift */,
 				77B9DE641C50093A00D2F174 /* CreditApplicationTableViewCell.swift */,
@@ -382,12 +411,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				82F1DCC41C501532008C7FFB /* OfferTableViewCell.xib in Resources */,
+				776BA29B1C56AE2C00AB2995 /* CreditApplicationPending.xib in Resources */,
+				776BA29F1C56AE6A00AB2995 /* CreditApplicationApproved.xib in Resources */,
 				77B9DE671C50194A00D2F174 /* CreditApplicationTableViewCell.xib in Resources */,
 				82F1DCC81C5023A4008C7FFB /* OfferDetailView.xib in Resources */,
 				82B944A71C4F39780017A60B /* LaunchScreen.storyboard in Resources */,
+				776BA29D1C56AE4C00AB2995 /* CreditApplicationDelivered.xib in Resources */,
 				82B944A41C4F39780017A60B /* Assets.xcassets in Resources */,
+				776BA2A31C56AEC400AB2995 /* CreditApplicationCanceled.xib in Resources */,
 				82F1DCD81C505FB7008C7FFB /* CreditApplicationDetailView.xib in Resources */,
 				82B944A21C4F39780017A60B /* Main.storyboard in Resources */,
+				776BA2A11C56AEB100AB2995 /* CreditApplicationLive.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				776BA2A51C56AEE800AB2995 /* CreditApplicationPending.swift in Sources */,
 				82F1DCD21C505ABE008C7FFB /* ProfileTableViewController.swift in Sources */,
 				77B9DE651C50093A00D2F174 /* CreditApplicationTableViewCell.swift in Sources */,
 				82F1DCC01C5002E6008C7FFB /* Offer.swift in Sources */,
@@ -419,6 +454,7 @@
 				82F1DCC21C5003CE008C7FFB /* OfferTableViewCell.swift in Sources */,
 				82B9449D1C4F39780017A60B /* AppDelegate.swift in Sources */,
 				82F1DCD41C505AE2008C7FFB /* CreditApplicationsTableViewController.swift in Sources */,
+				77CBD6181C56B62100CD377B /* CreditApplicationApproved.swift in Sources */,
 				82F1DCBD1C50024A008C7FFB /* OffersTableViewController.swift in Sources */,
 				772E90DF1C56A2EA004CF542 /* User.swift in Sources */,
 				82F1DCD01C505935008C7FFB /* MylesTableViewController.swift in Sources */,
