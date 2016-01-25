@@ -53,10 +53,20 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
     }
     
     func setCorrectView() {
+        if creditApplication["approvedAt"] == nil && creditApplication["declinedAt"] == nil {
+            // pending
+        } else if creditApplication["deliveredAt"] == nil {
+            // approved
+        } else if creditApplication["hitBonusAt"] == nil && creditApplication["missedBonusAt"] == nil {
+            // delivered
+        } else if creditApplication["canceledAt"] == nil {
+            // live
+        } else {
+            // canceled
+        }
     }
     
     override func viewDidLoad() {
-        title = creditApplication.offer?.name
         self.setCorrectView()
     }
 }
