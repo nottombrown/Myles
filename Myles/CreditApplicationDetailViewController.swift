@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CreditApplicationDetailViewController: UIViewController, CreditApplicationPendingDelegate, CreditApplicationApprovedDelegate {
+class CreditApplicationDetailViewController: UIViewController, CreditApplicationPendingDelegate, CreditApplicationApprovedDelegate, CreditApplicationDeliveredDelegate, CreditApplicationLiveDelegate {
     
     let creditApplication: CreditApplication
     
@@ -37,20 +37,19 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
         creditApplication.saveEventually()
     }
     
-    @IBAction func won(sender: AnyObject) {
+    func creditApplicationBonusHit() {
         creditApplication["hitBonusAt"] = NSDate()
         creditApplication.saveEventually()
-        // move to cancelation
     }
-    @IBAction func lost(sender: AnyObject) {
+    
+    func creditApplicationBonusMissed() {
         creditApplication["missedBonusAt"] = NSDate()
         creditApplication.saveEventually()
-        // move to cancelation
     }
-    @IBAction func canceled(sender: AnyObject) {
+    
+    func creditApplicationCanceled() {
         creditApplication["canceledAt"] = NSDate()
         creditApplication.saveEventually()
-        // move to end state
     }
     
     func setCorrectView() {
