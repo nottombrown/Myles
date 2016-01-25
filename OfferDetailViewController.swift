@@ -27,4 +27,19 @@ class OfferDetailViewController: UIViewController {
         title = offer.name
         nameLabel.text = "\(offer.name!) Details"
     }
+    
+    @IBAction func apply(sender: AnyObject) {
+        let application = CreditApplication()
+        application["uuid"] = User.uuid()
+        application["offer"] = offer
+        application.saveInBackgroundWithBlock { (saved, e) -> Void in
+            if saved {
+                let link = self.offer["link"] as! String!
+                UIApplication.sharedApplication().openURL(NSURL(string: link)!)
+                // redirect to this credit application
+            } else {
+                // some error
+            }
+        }
+    }
 }

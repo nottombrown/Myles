@@ -15,12 +15,9 @@ class OffersTableViewController: MylesTableViewController {
     override func queryForTable() -> PFQuery {
         let query = Offer.query()
         query?.addAscendingOrder("goodness")
-        //        let i = PFInstallation.currentInstallation()
-        
-        //        let q2 = CreditApplication.query()
-        //        q2?.whereKey("installation", equalTo: i.objectId!)
-        //        query?.whereKey("objectId", doesNotMatchKey: "offer", inQuery: q2!)
-        
+        let q2 = CreditApplication.query()
+        q2?.whereKey("uuid", equalTo: User.uuid())
+        query?.whereKey("objectId", doesNotMatchKey: "offer", inQuery: q2!)
         return query!
     }
     

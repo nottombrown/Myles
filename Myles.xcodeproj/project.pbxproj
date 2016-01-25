@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		772E90DF1C56A2EA004CF542 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E90DE1C56A2EA004CF542 /* User.swift */; };
 		77B9DE631C5008AB00D2F174 /* CreditApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B9DE621C5008AB00D2F174 /* CreditApplication.swift */; };
 		77B9DE651C50093A00D2F174 /* CreditApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B9DE641C50093A00D2F174 /* CreditApplicationTableViewCell.swift */; };
 		77B9DE671C50194A00D2F174 /* CreditApplicationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77B9DE661C50194A00D2F174 /* CreditApplicationTableViewCell.xib */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		772E90DE1C56A2EA004CF542 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		77B9DE621C5008AB00D2F174 /* CreditApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditApplication.swift; sourceTree = "<group>"; };
 		77B9DE641C50093A00D2F174 /* CreditApplicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditApplicationTableViewCell.swift; sourceTree = "<group>"; };
 		77B9DE661C50194A00D2F174 /* CreditApplicationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditApplicationTableViewCell.xib; sourceTree = "<group>"; };
@@ -154,6 +156,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		772E90DD1C56A2C0004CF542 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				772E90DE1C56A2EA004CF542 /* User.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		82B944901C4F39770017A60B = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +191,7 @@
 		82B9449B1C4F39780017A60B /* Myles */ = {
 			isa = PBXGroup;
 			children = (
+				772E90DD1C56A2C0004CF542 /* Util */,
 				82F1DCBE1C5002CF008C7FFB /* Models */,
 				82B9449C1C4F39780017A60B /* AppDelegate.swift */,
 				82B944A01C4F39780017A60B /* Main.storyboard */,
@@ -409,6 +420,7 @@
 				82B9449D1C4F39780017A60B /* AppDelegate.swift in Sources */,
 				82F1DCD41C505AE2008C7FFB /* CreditApplicationsTableViewController.swift in Sources */,
 				82F1DCBD1C50024A008C7FFB /* OffersTableViewController.swift in Sources */,
+				772E90DF1C56A2EA004CF542 /* User.swift in Sources */,
 				82F1DCD01C505935008C7FFB /* MylesTableViewController.swift in Sources */,
 				82F1DCCC1C50240F008C7FFB /* OfferDetailViewController.swift in Sources */,
 				77B9DE631C5008AB00D2F174 /* CreditApplication.swift in Sources */,
