@@ -268,9 +268,9 @@
 			isa = PBXGroup;
 			children = (
 				82F1DCC31C501532008C7FFB /* OfferTableViewCell.xib */,
+				77B9DE661C50194A00D2F174 /* CreditApplicationTableViewCell.xib */,
 				82F1DCC11C5003CE008C7FFB /* OfferTableViewCell.swift */,
 				77B9DE641C50093A00D2F174 /* CreditApplicationTableViewCell.swift */,
-				77B9DE661C50194A00D2F174 /* CreditApplicationTableViewCell.xib */,
 				82F1DCC71C5023A4008C7FFB /* OfferDetailView.xib */,
 				82F1DCD71C505FB7008C7FFB /* CreditApplicationDetailView.xib */,
 			);
