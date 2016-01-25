@@ -10,6 +10,8 @@ import Foundation
 
 class OfferDetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var cardImage: PFImageView!
+    @IBOutlet weak var applyButton: UIButton!
     
     let offer: Offer
     
@@ -26,6 +28,8 @@ class OfferDetailViewController: UIViewController {
     override func viewDidLoad() {
         title = offer.name
         nameLabel.text = "\(offer.name!) Details"
+        cardImage.file = offer.image
+        applyButton.setTitle("Apply for \(offer.name!)", forState: .Normal)
     }
     
     @IBAction func apply(sender: AnyObject) {
