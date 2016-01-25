@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z41-eF-PU1" customClass="PFImageView">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z41-eF-PU1" customClass="PFImageView">
                         <rect key="frame" x="8" y="14" width="86" height="46"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="88" id="BMb-Yw-ORH"/>
@@ -64,9 +64,7 @@
                     <constraint firstItem="bF4-TK-fEs" firstAttribute="bottom" secondItem="Z41-eF-PU1" secondAttribute="bottom" id="L0u-Xf-qJq"/>
                     <constraint firstItem="Z41-eF-PU1" firstAttribute="leading" secondItem="gxe-Tw-kH4" secondAttribute="leadingMargin" id="LD3-gb-YvL"/>
                     <constraint firstItem="bF4-TK-fEs" firstAttribute="leading" secondItem="Z41-eF-PU1" secondAttribute="trailing" constant="12" id="VyE-Ne-Eik"/>
-                    <constraint firstItem="Z41-eF-PU1" firstAttribute="centerY" secondItem="gxe-Tw-kH4" secondAttribute="centerY" id="WYQ-Im-09V"/>
                     <constraint firstItem="bF4-TK-fEs" firstAttribute="trailing" secondItem="gxe-Tw-kH4" secondAttribute="trailingMargin" id="ZZA-cE-YEn"/>
-                    <constraint firstItem="Z41-eF-PU1" firstAttribute="top" secondItem="gxe-Tw-kH4" secondAttribute="topMargin" constant="6" id="dlt-SD-sfh"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
