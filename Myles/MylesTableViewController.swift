@@ -17,6 +17,6 @@ class MylesTableViewController: PFQueryTableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 84.0
+        return 75.0
     }
 }
