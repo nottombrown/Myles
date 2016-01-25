@@ -7,8 +7,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreditApplicationDetailViewController" customModule="Myles" customModuleProvider="target">
             <connections>
+                <outlet property="approvedButton" destination="Rmf-Dm-PJJ" id="Pgn-fa-JGt"/>
+                <outlet property="canceledButton" destination="BrD-YN-yW3" id="sTd-F5-crM"/>
+                <outlet property="declinedButton" destination="Uuq-4C-SHM" id="Iup-Zw-qfn"/>
+                <outlet property="deliveredButton" destination="NFh-IO-JlL" id="3cB-v4-qvF"/>
+                <outlet property="loseButton" destination="rPg-Y4-W5m" id="3la-Pr-nhB"/>
                 <outlet property="nameLabel" destination="6me-7V-TpK" id="n1o-ah-dxB"/>
                 <outlet property="view" destination="EsS-iA-Vl0" id="fPE-3Y-hI8"/>
+                <outlet property="winButton" destination="sE5-7D-fKC" id="5ql-ei-0fN"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,6 +28,48 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmf-Dm-PJJ">
+                    <rect key="frame" x="58" y="219" width="67" height="30"/>
+                    <state key="normal" title="Approved"/>
+                    <connections>
+                        <action selector="approved:" destination="-1" eventType="touchUpInside" id="ue1-FN-A3R"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uuq-4C-SHM">
+                    <rect key="frame" x="193" y="219" width="60" height="30"/>
+                    <state key="normal" title="Declined"/>
+                    <connections>
+                        <action selector="declined:" destination="-1" eventType="touchUpInside" id="2xG-yP-Ypx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sE5-7D-fKC">
+                    <rect key="frame" x="58" y="285" width="67" height="30"/>
+                    <state key="normal" title="Hit Bonus"/>
+                    <connections>
+                        <action selector="won:" destination="-1" eventType="touchUpInside" id="XbJ-Hu-Uau"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPg-Y4-W5m">
+                    <rect key="frame" x="175" y="285" width="96" height="30"/>
+                    <state key="normal" title="Missed Bonus"/>
+                    <connections>
+                        <action selector="lost:" destination="-1" eventType="touchUpInside" id="bHO-cI-EBO"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFh-IO-JlL">
+                    <rect key="frame" x="129" y="253" width="65" height="30"/>
+                    <state key="normal" title="Delivered"/>
+                    <connections>
+                        <action selector="delivered:" destination="-1" eventType="touchUpInside" id="TuG-3C-84V"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrD-YN-yW3">
+                    <rect key="frame" x="129" y="334" width="65" height="30"/>
+                    <state key="normal" title="Canceled"/>
+                    <connections>
+                        <action selector="canceled:" destination="-1" eventType="touchUpInside" id="P14-LO-qjl"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
