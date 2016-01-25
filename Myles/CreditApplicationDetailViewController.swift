@@ -71,37 +71,46 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
         for subview in self.stateView.subviews {
             subview.removeFromSuperview()
         }
+        
+        let bundle = NSBundle.mainBundle()
 
         if creditApplication["approvedAt"] == nil && creditApplication["declinedAt"] == nil {
-            let view = CreditApplicationPending(creditApplication: creditApplication)
+            let view = bundle.loadNibNamed("CreditApplicationPending", owner: self, options: nil)[0] as! CreditApplicationPending
             view.delegate = self
+            view.creditApplication = creditApplication
             self.stateView.addSubview(view)
             print("pending")
         } else if creditApplication["declinedAt"] != nil {
-            let view = CreditApplicationDeclined(creditApplication: creditApplication)
+            let view = bundle.loadNibNamed("CreditApplicationDeclined", owner: self, options: nil)[0] as! CreditApplicationDeclined
             view.delegate = self
+            view.creditApplication = creditApplication
             self.stateView.addSubview(view)
             print("declined")
         } else if creditApplication["deliveredAt"] == nil {
-            let view = CreditApplicationApproved(creditApplication: creditApplication)
+            let view = bundle.loadNibNamed("CreditApplicationApproved", owner: self, options: nil)[0] as! CreditApplicationApproved
             view.delegate = self
+            view.creditApplication = creditApplication
             self.stateView.addSubview(view)
             print("awaiting delivery")
         } else if creditApplication["hitBonusAt"] == nil && creditApplication["missedBonusAt"] == nil {
-            let view = CreditApplicationDelivered(creditApplication: creditApplication)
+            let view = bundle.loadNibNamed("CreditApplicationDelivered", owner: self, options: nil)[0] as! CreditApplicationDelivered
+            view.creditApplication = creditApplication
             view.delegate = self
             self.stateView.addSubview(view)
             print("delivered")
         } else if creditApplication["canceledAt"] == nil {
-            let view = CreditApplicationLive(creditApplication: creditApplication)
+            let view = bundle.loadNibNamed("CreditApplicationLive", owner: self, options: nil)[0] as! CreditApplicationLive
+            view.creditApplication = creditApplication
             view.delegate = self
             self.stateView.addSubview(view)
             print("awaiting cancel")
         } else {
-            let view = CreditApplicationCanceled(creditApplication: creditApplication)
+            let view = bundle.loadNibNamed("CreditApplicationCanceled", owner: self, options: nil)[0] as! CreditApplicationCanceled
+            view.creditApplication = creditApplication
             self.stateView.addSubview(view)
             print("canceled")
         }
+        self.view.setNeedsDisplay()
     }
     
     override func viewDidLoad() {

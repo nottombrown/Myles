@@ -15,21 +15,17 @@ protocol CreditApplicationPendingDelegate {
 
 class CreditApplicationPending: UIView {
     var delegate:CreditApplicationPendingDelegate?
-    let creditApplication:CreditApplication
-    
-    init(creditApplication:CreditApplication) {
-        self.creditApplication = creditApplication
-        super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    var creditApplication:CreditApplication?
     
     @IBAction func approved(sender: AnyObject) {
         delegate?.creditApplicationApproved()
     }
     @IBAction func declined(sender: AnyObject) {
         delegate?.creditApplicationDeclined()
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        print("awaking pending")
     }
 }

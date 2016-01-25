@@ -14,17 +14,8 @@ protocol CreditApplicationDeliveredDelegate {
 }
 
 class CreditApplicationDelivered: UIView {
-    let creditApplication:CreditApplication
+    var creditApplication:CreditApplication?
     var delegate:CreditApplicationDeliveredDelegate?
-    
-    init(creditApplication:CreditApplication) {
-        self.creditApplication = creditApplication
-        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     @IBAction func win(sender: AnyObject) {
         self.delegate?.creditApplicationBonusHit()

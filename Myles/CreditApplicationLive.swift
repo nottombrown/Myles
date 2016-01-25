@@ -13,18 +13,10 @@ protocol CreditApplicationLiveDelegate {
 }
 
 class CreditApplicationLive: UIView {
-    let creditApplication:CreditApplication
+    var creditApplication:CreditApplication?
     var delegate:CreditApplicationLiveDelegate?
-    
-    init(creditApplication:CreditApplication) {
-        self.creditApplication = creditApplication
-        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-    }
     
     @IBAction func canceled(sender: AnyObject) {
         self.delegate?.creditApplicationCanceled()
-    }
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

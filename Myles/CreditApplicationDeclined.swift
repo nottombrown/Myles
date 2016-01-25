@@ -14,16 +14,7 @@ protocol CreditApplicationDeclinedDelegate {
 
 class CreditApplicationDeclined: UIView {
     var delegate:CreditApplicationDeclinedDelegate?
-    let creditApplication:CreditApplication
-    
-    init(creditApplication:CreditApplication) {
-        self.creditApplication = creditApplication
-        super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    var creditApplication:CreditApplication?
     
     @IBAction func reapply(sender: AnyObject) {
         self.delegate?.creditApplicationReapplied()
