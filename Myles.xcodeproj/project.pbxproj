@@ -291,11 +291,11 @@
 		82F1DCCD1C5058EE008C7FFB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				82F1DCCB1C50240F008C7FFB /* OfferDetailViewController.swift */,
 				82F1DCD51C505F45008C7FFB /* CreditApplicationDetailViewController.swift */,
-				82F1DCBC1C50024A008C7FFB /* OffersTableViewController.swift */,
 				82F1DCD31C505AE2008C7FFB /* CreditApplicationsTableViewController.swift */,
 				82F1DCCF1C505935008C7FFB /* MylesTableViewController.swift */,
+				82F1DCCB1C50240F008C7FFB /* OfferDetailViewController.swift */,
+				82F1DCBC1C50024A008C7FFB /* OffersTableViewController.swift */,
 				82F1DCD11C505ABE008C7FFB /* ProfileTableViewController.swift */,
 			);
 			name = Controllers;

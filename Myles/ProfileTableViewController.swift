@@ -13,7 +13,7 @@ class ProfileTableViewController: CreditApplicationsTableViewController {
     
     override func queryForTable() -> PFQuery {
         let approvedQuery = CreditApplication.query()?.whereKeyExists("approvedAt").whereKey("uuid", equalTo: User.uuid())
-        
+        approvedQuery!.includeKey("offer")
         approvedQuery!.addDescendingOrder("approvedAt")
 
         return approvedQuery!
