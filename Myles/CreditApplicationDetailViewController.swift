@@ -8,7 +8,9 @@
 
 import Foundation
 
-class CreditApplicationDetailViewController: UIViewController, CreditApplicationPendingDelegate, CreditApplicationApprovedDelegate, CreditApplicationDeliveredDelegate, CreditApplicationLiveDelegate {
+class CreditApplicationDetailViewController: UIViewController, CreditApplicationPendingDelegate, CreditApplicationDeclinedDelegate, CreditApplicationApprovedDelegate, CreditApplicationDeliveredDelegate, CreditApplicationLiveDelegate {
+    
+    @IBOutlet weak var stateView: UIView!
     
     let creditApplication: CreditApplication
     
@@ -22,51 +24,88 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
         fatalError("NSCoding not supported")
     }
     
+    func creditApplicationReapplied() {
+        creditApplication["declinedAt"] = nil
+        creditApplication["appliedAt"] = NSDate()
+        creditApplication.saveEventually()
+        self.setCorrectView()
+    }
+    
     func creditApplicationDeclined() {
         creditApplication["declinedAt"] = NSDate()
         creditApplication.saveEventually()
+        self.setCorrectView()
     }
     
     func creditApplicationApproved() {
         creditApplication["approvedAt"] = NSDate()
         creditApplication.saveEventually()
+        self.setCorrectView()
     }
     
     func creditApplicationDelivered() {
         creditApplication["deliveredAt"] = NSDate()
         creditApplication.saveEventually()
+        self.setCorrectView()
     }
     
     func creditApplicationBonusHit() {
         creditApplication["hitBonusAt"] = NSDate()
         creditApplication.saveEventually()
+        self.setCorrectView()
     }
     
     func creditApplicationBonusMissed() {
         creditApplication["missedBonusAt"] = NSDate()
         creditApplication.saveEventually()
+        self.setCorrectView()
     }
     
     func creditApplicationCanceled() {
         creditApplication["canceledAt"] = NSDate()
         creditApplication.saveEventually()
+        self.setCorrectView()
     }
     
     func setCorrectView() {
+        for subview in self.stateView.subviews {
+            subview.removeFromSuperview()
+        }
+
         if creditApplication["approvedAt"] == nil && creditApplication["declinedAt"] == nil {
-            // pending
+            let view = CreditApplicationPending(creditApplication: creditApplication)
+            view.delegate = self
+            self.stateView.addSubview(view)
+            print("pending")
+        } else if creditApplication["declinedAt"] != nil {
+            let view = CreditApplicationDeclined(creditApplication: creditApplication)
+            view.delegate = self
+            self.stateView.addSubview(view)
+            print("declined")
         } else if creditApplication["deliveredAt"] == nil {
-            // approved
+            let view = CreditApplicationApproved(creditApplication: creditApplication)
+            view.delegate = self
+            self.stateView.addSubview(view)
+            print("awaiting delivery")
         } else if creditApplication["hitBonusAt"] == nil && creditApplication["missedBonusAt"] == nil {
-            // delivered
+            let view = CreditApplicationDelivered(creditApplication: creditApplication)
+            view.delegate = self
+            self.stateView.addSubview(view)
+            print("delivered")
         } else if creditApplication["canceledAt"] == nil {
-            // live
+            let view = CreditApplicationLive(creditApplication: creditApplication)
+            view.delegate = self
+            self.stateView.addSubview(view)
+            print("awaiting cancel")
         } else {
-            // canceled
+            let view = CreditApplicationCanceled(creditApplication: creditApplication)
+            self.stateView.addSubview(view)
+            print("canceled")
         }
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.setCorrectView()
     }
 }
