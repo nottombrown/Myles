@@ -32,6 +32,7 @@ class OfferDetailViewController: UIViewController {
         let application = CreditApplication()
         application["uuid"] = User.uuid()
         application["offer"] = offer
+        application["appliedAt"] = NSDate()
         application.saveInBackgroundWithBlock { (saved, e) -> Void in
             if saved {
                 let link = self.offer["link"] as! String!
