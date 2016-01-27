@@ -32,7 +32,9 @@ class CreditApplicationsTableViewController: MylesTableViewController {
         
         let creditApp = object as! CreditApplication
         
-        cell.appliedAtLabel.text = String(creditApp.appliedAt!)
+        if let appliedAt = creditApp.appliedAt {
+            cell.appliedAtLabel.text = "Applied \(timeAgoSinceDate(appliedAt, numericDates: false).lowercaseString)"
+        }        
         
         if let offer = creditApp.offer {
             cell.cardImage.file = offer.image

@@ -48,6 +48,7 @@
 		82D347131C50004300253FA1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D347121C50004300253FA1 /* ParseUI.framework */; };
 		82D347141C50004300253FA1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D347121C50004300253FA1 /* ParseUI.framework */; };
 		82D347151C50004300253FA1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D347121C50004300253FA1 /* ParseUI.framework */; };
+		82E7796D1C59453100C74C54 /* TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E7796C1C59453100C74C54 /* TimeAgo.swift */; };
 		82F1DCBD1C50024A008C7FFB /* OffersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F1DCBC1C50024A008C7FFB /* OffersTableViewController.swift */; };
 		82F1DCC01C5002E6008C7FFB /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F1DCBF1C5002E6008C7FFB /* Offer.swift */; };
 		82F1DCC21C5003CE008C7FFB /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F1DCC11C5003CE008C7FFB /* OfferTableViewCell.swift */; };
@@ -123,6 +124,7 @@
 		82D347161C50009400253FA1 /* Myles-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Myles-Bridging-Header.h"; sourceTree = "<group>"; };
 		82D347171C50009400253FA1 /* MylesTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MylesTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		82D347181C50009400253FA1 /* MylesUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MylesUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		82E7796C1C59453100C74C54 /* TimeAgo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAgo.swift; sourceTree = "<group>"; };
 		82F1DCBC1C50024A008C7FFB /* OffersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersTableViewController.swift; sourceTree = "<group>"; };
 		82F1DCBF1C5002E6008C7FFB /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		82F1DCC11C5003CE008C7FFB /* OfferTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferTableViewCell.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				772E90DE1C56A2EA004CF542 /* User.swift */,
+				82E7796C1C59453100C74C54 /* TimeAgo.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				77CBD6201C56CC1500CD377B /* CreditApplicationDeclined.swift in Sources */,
 				77CBD61C1C56B8B200CD377B /* CreditApplicationLive.swift in Sources */,
 				82F1DCD61C505F45008C7FFB /* CreditApplicationDetailViewController.swift in Sources */,
+				82E7796D1C59453100C74C54 /* TimeAgo.swift in Sources */,
 				82F1DCC21C5003CE008C7FFB /* OfferTableViewCell.swift in Sources */,
 				82B9449D1C4F39780017A60B /* AppDelegate.swift in Sources */,
 				82F1DCD41C505AE2008C7FFB /* CreditApplicationsTableViewController.swift in Sources */,
