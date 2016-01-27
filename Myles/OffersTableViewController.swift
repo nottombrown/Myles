@@ -17,7 +17,7 @@ class OffersTableViewController: MylesTableViewController {
         query?.addAscendingOrder("goodness")
         let q2 = CreditApplication.query()
         q2?.whereKey("uuid", equalTo: User.uuid())
-        query?.whereKey("objectId", doesNotMatchKey: "offer", inQuery: q2!)
+        query?.whereKey("objectId", doesNotMatchKey: "offerId", inQuery: q2!)
         return query!
     }
     
