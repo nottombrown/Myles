@@ -27,12 +27,15 @@ class OfferDetailViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+
+        if self.respondsToSelector("edgesForExtendedLayout") {
+            self.edgesForExtendedLayout = .None
+        }
+
+        
         title = offer.name
         cardImage.file = offer.image
         applyButton.setTitle("Apply for \(offer.name!)", forState: .Normal)
-        
-        
-
         
         rewardExplanationLabel.attributedText = rewardAttributedString()
         requirementsLabel.text = "\(offer.condition ?? "All you need is to be approved"). We'll walk you through canceling the card afterwards."

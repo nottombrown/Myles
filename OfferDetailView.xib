@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OfferDetailViewController" customModule="Myles" customModuleProvider="target">
@@ -19,50 +20,89 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u5K-GL-Vcf" customClass="PFImageView">
-                    <rect key="frame" x="27" y="92" width="320" height="178"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u5K-GL-Vcf" customClass="PFImageView">
+                    <rect key="frame" x="28" y="28" width="318" height="177"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="u5K-GL-Vcf" secondAttribute="height" multiplier="160:89" id="d4z-uJ-igM"/>
+                    </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plp-ry-Iz6">
-                    <rect key="frame" x="27" y="504" width="320" height="30"/>
-                    <state key="normal" title="Apply on Chase Sapphire Site">
-                        <color key="titleColor" red="0.3411764706" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="apply:" destination="-1" eventType="touchUpInside" id="6JX-AG-Lzp"/>
-                    </connections>
-                </button>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DE3-8K-5rd" userLabel="Details">
-                    <rect key="frame" x="27" y="286" width="320" height="174"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DE3-8K-5rd" userLabel="Details">
+                    <rect key="frame" x="28" y="221" width="319" height="136"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What you get" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baf-Yf-uWl">
-                            <rect key="frame" x="0.0" y="10" width="92" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WHAT YOU GET" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baf-Yf-uWl">
+                            <rect key="frame" x="0.0" y="10" width="319" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="11"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Earn $500 if you spend $1000 within the first 6 months of having the card" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxZ-Yi-ZCB">
-                            <rect key="frame" x="0.0" y="104" width="320" height="60"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Earn $500 if you spend $1000 within the first 6 months of having the card" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxZ-Yi-ZCB">
+                            <rect key="frame" x="0.0" y="94" width="319" height="36"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="0.59999214020000002" green="0.59999214020000002" blue="0.59999214020000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Earn $500 if you spend $1000 within the first 6 months of having the card" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5B5-By-lwr">
-                            <rect key="frame" x="0.0" y="25" width="320" height="60"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Earn $500 if you spend $1000 within the first 6 months of having the card" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5B5-By-lwr">
+                            <rect key="frame" x="0.0" y="28" width="319" height="36"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="0.59999214020000002" green="0.59999214020000002" blue="0.59999214020000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How you get it" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6a-a5-2gK">
-                            <rect key="frame" x="0.0" y="91" width="99" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="HOW YOU GET IT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6a-a5-2gK">
+                            <rect key="frame" x="0.0" y="76" width="122" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="11"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="XxZ-Yi-ZCB" firstAttribute="top" secondItem="k6a-a5-2gK" secondAttribute="bottom" constant="3" id="4y7-T0-Fv0"/>
+                        <constraint firstItem="k6a-a5-2gK" firstAttribute="leading" secondItem="baf-Yf-uWl" secondAttribute="leading" id="5FZ-IZ-ZD3"/>
+                        <constraint firstItem="5B5-By-lwr" firstAttribute="leading" secondItem="baf-Yf-uWl" secondAttribute="leading" id="8op-YQ-5WB"/>
+                        <constraint firstItem="XxZ-Yi-ZCB" firstAttribute="leading" secondItem="baf-Yf-uWl" secondAttribute="leading" id="VG6-ne-VCB"/>
+                        <constraint firstItem="baf-Yf-uWl" firstAttribute="top" secondItem="DE3-8K-5rd" secondAttribute="top" constant="10" id="cEP-bG-uGT"/>
+                        <constraint firstAttribute="bottom" secondItem="XxZ-Yi-ZCB" secondAttribute="bottom" id="jUN-2i-3hu"/>
+                        <constraint firstItem="5B5-By-lwr" firstAttribute="top" secondItem="baf-Yf-uWl" secondAttribute="bottom" constant="3" id="mMF-My-xcg"/>
+                        <constraint firstAttribute="trailing" secondItem="baf-Yf-uWl" secondAttribute="trailing" id="nxr-pG-zIH"/>
+                        <constraint firstItem="k6a-a5-2gK" firstAttribute="top" secondItem="5B5-By-lwr" secondAttribute="bottom" constant="20" id="pPY-ue-B8t"/>
+                        <constraint firstAttribute="trailing" secondItem="XxZ-Yi-ZCB" secondAttribute="trailing" id="ppe-xN-zGd"/>
+                        <constraint firstAttribute="trailing" secondItem="5B5-By-lwr" secondAttribute="trailing" id="r5e-dt-ZXk"/>
+                        <constraint firstItem="baf-Yf-uWl" firstAttribute="leading" secondItem="DE3-8K-5rd" secondAttribute="leading" id="sBq-vk-KHB"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzQ-Lk-N7q" userLabel="Button Container">
+                    <rect key="frame" x="0.0" y="357" width="375" height="310"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plp-ry-Iz6">
+                            <rect key="frame" x="86" y="140" width="203" height="30"/>
+                            <state key="normal" title="Apply on Chase Sapphire Site">
+                                <color key="titleColor" red="0.3411764706" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="apply:" destination="-1" eventType="touchUpInside" id="6JX-AG-Lzp"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="plp-ry-Iz6" firstAttribute="centerX" secondItem="rzQ-Lk-N7q" secondAttribute="centerX" id="8u8-PM-luk"/>
+                        <constraint firstItem="plp-ry-Iz6" firstAttribute="centerY" secondItem="rzQ-Lk-N7q" secondAttribute="centerY" id="oGt-UU-i33"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="rzQ-Lk-N7q" secondAttribute="bottom" id="5vB-j1-4zA"/>
+                <constraint firstItem="DE3-8K-5rd" firstAttribute="top" secondItem="u5K-GL-Vcf" secondAttribute="bottom" constant="16" id="Cjt-DQ-O7e"/>
+                <constraint firstAttribute="trailing" secondItem="rzQ-Lk-N7q" secondAttribute="trailing" id="H3c-BB-7tM"/>
+                <constraint firstItem="rzQ-Lk-N7q" firstAttribute="top" secondItem="DE3-8K-5rd" secondAttribute="bottom" id="M2g-t9-JEt"/>
+                <constraint firstItem="rzQ-Lk-N7q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="aWD-6A-cXY"/>
+                <constraint firstItem="DE3-8K-5rd" firstAttribute="leading" secondItem="u5K-GL-Vcf" secondAttribute="leading" id="dWo-y1-Cj3"/>
+                <constraint firstItem="u5K-GL-Vcf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="28" id="j3z-p3-JUk"/>
+                <constraint firstItem="u5K-GL-Vcf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="28" id="jJQ-fx-UJQ"/>
+                <constraint firstItem="u5K-GL-Vcf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jQN-R5-6wM"/>
+                <constraint firstAttribute="trailing" secondItem="DE3-8K-5rd" secondAttribute="trailing" constant="28" id="oLC-Lk-xIU"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>
     </objects>
