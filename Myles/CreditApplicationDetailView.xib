@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreditApplicationDetailViewController" customModule="Myles" customModuleProvider="target">
             <connections>
+                <outlet property="cardImage" destination="lgu-Bc-EOW" id="yKB-18-gZD"/>
                 <outlet property="stateView" destination="t4U-oj-xhn" id="49J-p6-nbW"/>
                 <outlet property="view" destination="EsS-iA-Vl0" id="fPE-3Y-hI8"/>
             </connections>

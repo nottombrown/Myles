@@ -28,10 +28,10 @@ class OfferDetailViewController: UIViewController {
     
     override func viewDidLoad() {
 
+        // Let autolayout use the constraints imposed by Nav and Tab bars
         if self.respondsToSelector("edgesForExtendedLayout") {
             self.edgesForExtendedLayout = .None
         }
-
         
         title = offer.name
         cardImage.file = offer.image

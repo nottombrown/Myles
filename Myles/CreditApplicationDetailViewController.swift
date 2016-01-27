@@ -9,7 +9,7 @@
 import Foundation
 
 class CreditApplicationDetailViewController: UIViewController, CreditApplicationPendingDelegate, CreditApplicationDeclinedDelegate, CreditApplicationApprovedDelegate, CreditApplicationDeliveredDelegate, CreditApplicationLiveDelegate {
-    
+    @IBOutlet weak var cardImage: PFImageView!
     @IBOutlet weak var stateView: UIView!
     
     let creditApplication: CreditApplication
@@ -80,42 +80,56 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
             view.delegate = self
             view.creditApplication = creditApplication
             self.stateView.addSubview(view)
+            view.frame = stateView.bounds
             print("pending")
         } else if creditApplication["declinedAt"] != nil {
             let view = bundle.loadNibNamed("CreditApplicationDeclined", owner: self, options: nil)[0] as! CreditApplicationDeclined
             view.delegate = self
             view.creditApplication = creditApplication
             self.stateView.addSubview(view)
+            view.frame = stateView.bounds
             print("declined")
         } else if creditApplication["deliveredAt"] == nil {
             let view = bundle.loadNibNamed("CreditApplicationApproved", owner: self, options: nil)[0] as! CreditApplicationApproved
             view.delegate = self
             view.creditApplication = creditApplication
             self.stateView.addSubview(view)
+            view.frame = stateView.bounds
             print("awaiting delivery")
         } else if creditApplication["hitBonusAt"] == nil && creditApplication["missedBonusAt"] == nil {
             let view = bundle.loadNibNamed("CreditApplicationDelivered", owner: self, options: nil)[0] as! CreditApplicationDelivered
             view.creditApplication = creditApplication
             view.delegate = self
             self.stateView.addSubview(view)
+            view.frame = stateView.bounds
             print("delivered")
         } else if creditApplication["canceledAt"] == nil {
             let view = bundle.loadNibNamed("CreditApplicationLive", owner: self, options: nil)[0] as! CreditApplicationLive
             view.creditApplication = creditApplication
             view.delegate = self
             self.stateView.addSubview(view)
+            view.frame = stateView.bounds
             print("awaiting cancel")
         } else {
             let view = bundle.loadNibNamed("CreditApplicationCanceled", owner: self, options: nil)[0] as! CreditApplicationCanceled
             view.creditApplication = creditApplication
             self.stateView.addSubview(view)
+            view.frame = stateView.bounds
             print("canceled")
         }
         self.view.setNeedsDisplay()
     }
     
     override func viewDidLoad() {
+
+        // Let autolayout use the constraints imposed by Nav and Tab bars
+        if self.respondsToSelector("edgesForExtendedLayout") {
+            self.edgesForExtendedLayout = .None
+        }
+        
         super.viewDidLoad()
         self.setCorrectView()
+        
+        cardImage.file = creditApplication.offer?.image
     }
 }
