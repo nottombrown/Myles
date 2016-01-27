@@ -16,6 +16,7 @@ extension Offer: PFSubclassing {
     @NSManaged var image: PFFile
     @NSManaged var name: String?
     @NSManaged var reward: String?
+    @NSManaged var condition: String?
     
     // Table view delegate methods here
     //1

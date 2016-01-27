@@ -9,7 +9,8 @@
             <connections>
                 <outlet property="applyButton" destination="plp-ry-Iz6" id="1XA-Cg-3Uq"/>
                 <outlet property="cardImage" destination="u5K-GL-Vcf" id="M5m-9m-9BE"/>
-                <outlet property="nameLabel" destination="GVM-75-t1T" id="j6K-TR-UeI"/>
+                <outlet property="requirementsLabel" destination="XxZ-Yi-ZCB" id="uwe-LO-MWd"/>
+                <outlet property="rewardExplanationLabel" destination="5B5-By-lwr" id="K9v-CU-BpX"/>
                 <outlet property="view" destination="iN0-l3-epB" id="zqj-5f-2dV"/>
             </connections>
         </placeholder>
@@ -18,22 +19,48 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chase Saphire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVM-75-t1T">
-                    <rect key="frame" x="27" y="278" width="320" height="47"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u5K-GL-Vcf" customClass="PFImageView">
                     <rect key="frame" x="27" y="92" width="320" height="178"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plp-ry-Iz6">
-                    <rect key="frame" x="27" y="560" width="320" height="30"/>
-                    <state key="normal" title="Apply on Chase Sapphire Site"/>
+                    <rect key="frame" x="27" y="504" width="320" height="30"/>
+                    <state key="normal" title="Apply on Chase Sapphire Site">
+                        <color key="titleColor" red="0.3411764706" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <connections>
                         <action selector="apply:" destination="-1" eventType="touchUpInside" id="6JX-AG-Lzp"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DE3-8K-5rd" userLabel="Details">
+                    <rect key="frame" x="27" y="286" width="320" height="174"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What you get" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baf-Yf-uWl">
+                            <rect key="frame" x="0.0" y="10" width="92" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Earn $500 if you spend $1000 within the first 6 months of having the card" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxZ-Yi-ZCB">
+                            <rect key="frame" x="0.0" y="104" width="320" height="60"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.59999214020000002" green="0.59999214020000002" blue="0.59999214020000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Earn $500 if you spend $1000 within the first 6 months of having the card" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5B5-By-lwr">
+                            <rect key="frame" x="0.0" y="25" width="320" height="60"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.59999214020000002" green="0.59999214020000002" blue="0.59999214020000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How you get it" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6a-a5-2gK">
+                            <rect key="frame" x="0.0" y="91" width="99" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

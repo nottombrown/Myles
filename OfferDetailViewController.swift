@@ -9,9 +9,10 @@
 import Foundation
 
 class OfferDetailViewController: UIViewController {
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cardImage: PFImageView!
     @IBOutlet weak var applyButton: UIButton!
+    @IBOutlet weak var requirementsLabel: UILabel!
+    @IBOutlet weak var rewardExplanationLabel: UILabel!
     
     let offer: Offer
     
@@ -27,9 +28,25 @@ class OfferDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         title = offer.name
-        nameLabel.text = "\(offer.name!) Details"
         cardImage.file = offer.image
         applyButton.setTitle("Apply for \(offer.name!)", forState: .Normal)
+        
+        
+
+        
+        rewardExplanationLabel.attributedText = rewardAttributedString()
+        requirementsLabel.text = "\(offer.condition ?? "All you need is to be approved"). We'll walk you through canceling the card afterwards."
+    }
+    
+    func rewardAttributedString() -> NSAttributedString {
+        let boldText  = "\(offer.reward!) in miles. "
+        let normalText = "It takes 10 minutes to convert them into Amazon credit."
+        let attributedString = NSMutableAttributedString(string:normalText)
+
+        let attributes = [NSFontAttributeName : UIFont.boldSystemFontOfSize(15), NSForegroundColorAttributeName : UIColor.blackColor() ]
+        let boldString = NSMutableAttributedString(string: boldText, attributes: attributes)
+        boldString.appendAttributedString(attributedString)
+        return boldString
     }
     
     @IBAction func apply(sender: AnyObject) {
