@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		772E90DF1C56A2EA004CF542 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E90DE1C56A2EA004CF542 /* User.swift */; };
 		776BA29B1C56AE2C00AB2995 /* CreditApplicationPending.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776BA29A1C56AE2C00AB2995 /* CreditApplicationPending.xib */; };
 		776BA29D1C56AE4C00AB2995 /* CreditApplicationDelivered.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776BA29C1C56AE4C00AB2995 /* CreditApplicationDelivered.xib */; };
 		776BA29F1C56AE6A00AB2995 /* CreditApplicationApproved.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776BA29E1C56AE6A00AB2995 /* CreditApplicationApproved.xib */; };
 		776BA2A11C56AEB100AB2995 /* CreditApplicationLive.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776BA2A01C56AEB100AB2995 /* CreditApplicationLive.xib */; };
 		776BA2A31C56AEC400AB2995 /* CreditApplicationCanceled.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776BA2A21C56AEC400AB2995 /* CreditApplicationCanceled.xib */; };
 		776BA2A51C56AEE800AB2995 /* CreditApplicationPending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776BA2A41C56AEE800AB2995 /* CreditApplicationPending.swift */; };
+		77765E821C59560F006C4FBF /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77765E811C59560F006C4FBF /* LoadingView.xib */; };
+		77765E841C595653006C4FBF /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77765E831C595653006C4FBF /* LoadingViewController.swift */; };
 		77B9DE631C5008AB00D2F174 /* CreditApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B9DE621C5008AB00D2F174 /* CreditApplication.swift */; };
 		77B9DE651C50093A00D2F174 /* CreditApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B9DE641C50093A00D2F174 /* CreditApplicationTableViewCell.swift */; };
 		77B9DE671C50194A00D2F174 /* CreditApplicationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77B9DE661C50194A00D2F174 /* CreditApplicationTableViewCell.xib */; };
@@ -80,13 +81,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		772E90DE1C56A2EA004CF542 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		776BA29A1C56AE2C00AB2995 /* CreditApplicationPending.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditApplicationPending.xib; sourceTree = "<group>"; };
 		776BA29C1C56AE4C00AB2995 /* CreditApplicationDelivered.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditApplicationDelivered.xib; sourceTree = "<group>"; };
 		776BA29E1C56AE6A00AB2995 /* CreditApplicationApproved.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditApplicationApproved.xib; sourceTree = "<group>"; };
 		776BA2A01C56AEB100AB2995 /* CreditApplicationLive.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditApplicationLive.xib; sourceTree = "<group>"; };
 		776BA2A21C56AEC400AB2995 /* CreditApplicationCanceled.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditApplicationCanceled.xib; sourceTree = "<group>"; };
 		776BA2A41C56AEE800AB2995 /* CreditApplicationPending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditApplicationPending.swift; sourceTree = "<group>"; };
+		77765E811C59560F006C4FBF /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		77765E831C595653006C4FBF /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		77B9DE621C5008AB00D2F174 /* CreditApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditApplication.swift; sourceTree = "<group>"; };
 		77B9DE641C50093A00D2F174 /* CreditApplicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditApplicationTableViewCell.swift; sourceTree = "<group>"; };
 		77B9DE661C50194A00D2F174 /* CreditApplicationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditApplicationTableViewCell.xib; sourceTree = "<group>"; };
@@ -185,7 +187,6 @@
 		772E90DD1C56A2C0004CF542 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				772E90DE1C56A2EA004CF542 /* User.swift */,
 				82E7796C1C59453100C74C54 /* TimeAgo.swift */,
 			);
 			name = Util;
@@ -306,6 +307,7 @@
 				82F1DCCB1C50240F008C7FFB /* OfferDetailViewController.swift */,
 				82F1DCBC1C50024A008C7FFB /* OffersTableViewController.swift */,
 				82F1DCD11C505ABE008C7FFB /* ProfileTableViewController.swift */,
+				77765E831C595653006C4FBF /* LoadingViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -320,6 +322,7 @@
 				82F1DCC71C5023A4008C7FFB /* OfferDetailView.xib */,
 				82F1DCC11C5003CE008C7FFB /* OfferTableViewCell.swift */,
 				82F1DCC31C501532008C7FFB /* OfferTableViewCell.xib */,
+				77765E811C59560F006C4FBF /* LoadingView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				776BA2A31C56AEC400AB2995 /* CreditApplicationCanceled.xib in Resources */,
 				77CBD6221C56CC5200CD377B /* CreditApplicationDeclined.xib in Resources */,
 				82F1DCD81C505FB7008C7FFB /* CreditApplicationDetailView.xib in Resources */,
+				77765E821C59560F006C4FBF /* LoadingView.xib in Resources */,
 				82B944A21C4F39780017A60B /* Main.storyboard in Resources */,
 				776BA2A11C56AEB100AB2995 /* CreditApplicationLive.xib in Resources */,
 			);
@@ -472,6 +476,7 @@
 				82F1DCC01C5002E6008C7FFB /* Offer.swift in Sources */,
 				77CBD6201C56CC1500CD377B /* CreditApplicationDeclined.swift in Sources */,
 				77CBD61C1C56B8B200CD377B /* CreditApplicationLive.swift in Sources */,
+				77765E841C595653006C4FBF /* LoadingViewController.swift in Sources */,
 				82F1DCD61C505F45008C7FFB /* CreditApplicationDetailViewController.swift in Sources */,
 				82E7796D1C59453100C74C54 /* TimeAgo.swift in Sources */,
 				82F1DCC21C5003CE008C7FFB /* OfferTableViewCell.swift in Sources */,
@@ -479,7 +484,6 @@
 				82F1DCD41C505AE2008C7FFB /* CreditApplicationsTableViewController.swift in Sources */,
 				77CBD6181C56B62100CD377B /* CreditApplicationApproved.swift in Sources */,
 				82F1DCBD1C50024A008C7FFB /* OffersTableViewController.swift in Sources */,
-				772E90DF1C56A2EA004CF542 /* User.swift in Sources */,
 				82F1DCD01C505935008C7FFB /* MylesTableViewController.swift in Sources */,
 				82F1DCCC1C50240F008C7FFB /* OfferDetailViewController.swift in Sources */,
 				77CBD61E1C56B96300CD377B /* CreditApplicationCanceled.swift in Sources */,

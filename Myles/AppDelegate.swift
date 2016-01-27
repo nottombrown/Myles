@@ -27,6 +27,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
+        PFUser.enableAutomaticUser()
+        
+        if PFUser.currentUser()!.objectId == nil {
+            let user = PFUser.currentUser()!
+            user.ACL = PFACL()
+            user.ACL!.publicReadAccess = false
+            let loader = LoadingViewController()
+            self.window!.rootViewController = loader
+            PFUser.currentUser()!.saveInBackgroundWithBlock({ (success, e) -> Void in
+                if success {
+                    let sb = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = sb.instantiateInitialViewController()
+                    self.window!.rootViewController = vc
+                }
+            })
+        }
+        
         // Override point for customization after application launch.
         return true
     }

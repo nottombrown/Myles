@@ -12,7 +12,9 @@ import Parse
 class ProfileTableViewController: CreditApplicationsTableViewController {
     
     override func queryForTable() -> PFQuery {
-        let approvedQuery = CreditApplication.query()?.whereKeyExists("approvedAt").whereKey("uuid", equalTo: User.uuid())
+        let approvedQuery = CreditApplication.query()
+        approvedQuery!.whereKeyExists("approvedAt")
+        approvedQuery!.whereKey("user", equalTo: PFUser.currentUser()!)
         approvedQuery!.includeKey("offer")
         approvedQuery!.addDescendingOrder("approvedAt")
 
