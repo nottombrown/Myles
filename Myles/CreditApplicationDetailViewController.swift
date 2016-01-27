@@ -40,7 +40,8 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
     func creditApplicationApproved() {
         creditApplication["approvedAt"] = NSDate()
         creditApplication.saveEventually()
-        self.setCorrectView()
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.navigateToApprovedApplication(creditApplication)
     }
     
     func creditApplicationDelivered() {

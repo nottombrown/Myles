@@ -52,7 +52,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    func navigateToPendingApplication(application: CreditApplication, offer: Offer) {
+        let link = offer["link"] as! String!
+        self.displayCreditApplicationInTab(application, index: 1)
+        UIApplication.sharedApplication().openURL(NSURL(string: link)!)
+    }
+    
+    func navigateToApprovedApplication(application: CreditApplication) {
+        self.displayCreditApplicationInTab(application, index: 2)
+    }
+    
+    func displayCreditApplicationInTab(application: CreditApplication, index: NSInteger) {
+        let tab = self.window?.rootViewController as! UITabBarController
+        let nav1 = tab.selectedViewController! as! UINavigationController
+        nav1.popToRootViewControllerAnimated(false)
+        tab.selectedIndex = index
+        let ca = CreditApplicationDetailViewController(creditApplication: application)
+        let nav2 = tab.selectedViewController! as! UINavigationController
+        nav2.pushViewController(ca, animated: false)
+    }
 
 }
 
