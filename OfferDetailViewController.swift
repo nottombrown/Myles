@@ -60,9 +60,8 @@ class OfferDetailViewController: UIViewController {
         application["appliedAt"] = NSDate()
         application.saveInBackgroundWithBlock { (saved, e) -> Void in
             if saved {
-                let link = self.offer["link"] as! String!
-                UIApplication.sharedApplication().openURL(NSURL(string: link)!)
-                // redirect to this credit application
+                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                appDelegate.navigateToPendingApplication(application, offer: self.offer)
             } else {
                 // some error
             }
