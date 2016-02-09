@@ -12,8 +12,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9E1-BD-SzR">
-                    <rect key="frame" x="118" y="135" width="65" height="30"/>
-                    <state key="normal" title="Delivered"/>
+                    <rect key="frame" x="105" y="135" width="90" height="30"/>
+                    <state key="normal" title="I got my card"/>
                     <connections>
                         <action selector="delivered:" destination="iN0-l3-epB" eventType="touchUpInside" id="xXr-rh-x3S"/>
                     </connections>
