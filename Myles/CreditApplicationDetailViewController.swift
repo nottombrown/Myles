@@ -78,7 +78,6 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
     func renderStateView(view:UIView!) {
         view.frame.size = stateView.bounds.size
         self.stateView.addSubview(view)
-        print("rendering state view")
     }
     
     func alert(title:String!, message:String!, actionTitle:String!) {
@@ -169,7 +168,6 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
         let aggregateView = contentView.subviews.reduce(CGRect())
             { aggRect, view in aggRect.union(view.frame) }
         scrollView.contentSize = aggregateView.size
-        print("laying out subviews")
     }
     
     override func viewDidLoad() {
