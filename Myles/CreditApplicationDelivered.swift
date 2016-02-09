@@ -16,6 +16,7 @@ protocol CreditApplicationDeliveredDelegate {
 class CreditApplicationDelivered: UIView {
     var creditApplication:CreditApplication?
     var delegate:CreditApplicationDeliveredDelegate?
+    @IBOutlet weak var bonusInstructionLabel: UILabel!
     
     @IBAction func win(sender: AnyObject) {
         self.delegate?.creditApplicationBonusHit()

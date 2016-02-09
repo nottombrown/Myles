@@ -54,7 +54,8 @@ class OfferDetailViewController: UIViewController {
     
     @IBAction func apply(sender: AnyObject) {
         let application = CreditApplication()
-        application["uuid"] = User.uuid()
+        application.ACL = PFACL(user: PFUser.currentUser()!)
+        application["user"] = PFUser.currentUser()
         application["offer"] = offer
         application["offerId"] = offer.objectId
         application["appliedAt"] = NSDate()

@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
         // [Optional] Power your app with Local Datastore. For more info, go to
         // https://parse.com/docs/ios/guide#local-datastore
         
@@ -26,6 +27,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+        PFUser.enableAutomaticUser()
+        
+        if PFUser.currentUser()!.objectId == nil {
+            let user = PFUser.currentUser()!
+            user.ACL = PFACL()
+            user.ACL!.publicReadAccess = false
+            let loader = LoadingViewController()
+            self.window!.rootViewController = loader
+            PFUser.currentUser()!.saveInBackgroundWithBlock({ (success, e) -> Void in
+                if success {
+                    let sb = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = sb.instantiateInitialViewController()
+                    self.window!.rootViewController = vc
+                }
+            })
+        }
         
         // Override point for customization after application launch.
         return true

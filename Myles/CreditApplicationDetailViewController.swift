@@ -68,6 +68,11 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
         self.setCorrectView()
     }
     
+    func renderStateView(view:UIView!) {
+        self.stateView.addSubview(view)
+        view.frame = stateView.bounds
+    }
+    
     func setCorrectView() {
         for subview in self.stateView.subviews {
             subview.removeFromSuperview()
@@ -79,42 +84,39 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
             let view = bundle.loadNibNamed("CreditApplicationPending", owner: self, options: nil)[0] as! CreditApplicationPending
             view.delegate = self
             view.creditApplication = creditApplication
-            self.stateView.addSubview(view)
-            view.frame = stateView.bounds
+            renderStateView(view)
             print("pending")
         } else if creditApplication["declinedAt"] != nil {
             let view = bundle.loadNibNamed("CreditApplicationDeclined", owner: self, options: nil)[0] as! CreditApplicationDeclined
             view.delegate = self
             view.creditApplication = creditApplication
-            self.stateView.addSubview(view)
-            view.frame = stateView.bounds
+            view.declinedInstructionLabel.text = "No worries. It happens all the time. You should reapply in X months."
+            renderStateView(view)
             print("declined")
         } else if creditApplication["deliveredAt"] == nil {
             let view = bundle.loadNibNamed("CreditApplicationApproved", owner: self, options: nil)[0] as! CreditApplicationApproved
             view.delegate = self
             view.creditApplication = creditApplication
-            self.stateView.addSubview(view)
-            view.frame = stateView.bounds
+            renderStateView(view)
             print("awaiting delivery")
         } else if creditApplication["hitBonusAt"] == nil && creditApplication["missedBonusAt"] == nil {
             let view = bundle.loadNibNamed("CreditApplicationDelivered", owner: self, options: nil)[0] as! CreditApplicationDelivered
+            view.bonusInstructionLabel.text = "You have 30 days left to spend $2k"
             view.creditApplication = creditApplication
             view.delegate = self
-            self.stateView.addSubview(view)
-            view.frame = stateView.bounds
+            renderStateView(view)
             print("delivered")
         } else if creditApplication["canceledAt"] == nil {
             let view = bundle.loadNibNamed("CreditApplicationLive", owner: self, options: nil)[0] as! CreditApplicationLive
+            view.cancelInstructionLabel.text = "Remember to cancel this card before DATE"
             view.creditApplication = creditApplication
             view.delegate = self
-            self.stateView.addSubview(view)
-            view.frame = stateView.bounds
+            renderStateView(view)
             print("awaiting cancel")
         } else {
             let view = bundle.loadNibNamed("CreditApplicationCanceled", owner: self, options: nil)[0] as! CreditApplicationCanceled
             view.creditApplication = creditApplication
-            self.stateView.addSubview(view)
-            view.frame = stateView.bounds
+            renderStateView(view)
             print("canceled")
         }
         self.view.setNeedsDisplay()

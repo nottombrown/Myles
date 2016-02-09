@@ -14,7 +14,7 @@ class CreditApplicationsTableViewController: MylesTableViewController {
     override func queryForTable() -> PFQuery {
         let query = CreditApplication.query()
         query?.includeKey("offer")
-        query?.whereKey("uuid", equalTo: User.uuid())
+        query?.whereKey("user", equalTo: PFUser.currentUser()!)
         query?.whereKeyDoesNotExist("approvedAt")
         query?.whereKeyDoesNotExist("declinedAt")
         query?.addDescendingOrder("appliedAt")

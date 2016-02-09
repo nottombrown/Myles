@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,20 +11,30 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cH-ii-bDC">
-                    <rect key="frame" x="118" y="135" width="65" height="30"/>
-                    <state key="normal" title="Canceled"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cH-ii-bDC">
+                    <rect key="frame" x="85" y="135" width="131" height="30"/>
+                    <state key="normal" title="I canceled the card"/>
                     <connections>
                         <action selector="canceled:" destination="iN0-l3-epB" eventType="touchUpInside" id="dMU-Wi-Gea"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make sure to cancel this card by DATE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7G-fs-I9d">
+                    <rect key="frame" x="8" y="30" width="284" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="0cH-ii-bDC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="f4Y-Id-yfz"/>
-                <constraint firstItem="0cH-ii-bDC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gZi-zH-W3w"/>
+                <constraint firstItem="I7G-fs-I9d" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="CcJ-lJ-fja"/>
+                <constraint firstItem="I7G-fs-I9d" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="CiZ-9B-lQb"/>
+                <constraint firstAttribute="trailing" secondItem="I7G-fs-I9d" secondAttribute="trailing" constant="8" id="Cy6-x2-jce"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelInstructionLabel" destination="I7G-fs-I9d" id="e0A-aB-k0X"/>
+            </connections>
         </view>
     </objects>
 </document>

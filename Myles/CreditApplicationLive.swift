@@ -16,6 +16,7 @@ class CreditApplicationLive: UIView {
     var creditApplication:CreditApplication?
     var delegate:CreditApplicationLiveDelegate?
     
+    @IBOutlet weak var cancelInstructionLabel: UILabel!
     @IBAction func canceled(sender: AnyObject) {
         self.delegate?.creditApplicationCanceled()
     }
