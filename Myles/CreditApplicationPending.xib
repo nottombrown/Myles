@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -11,22 +11,22 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bH7-Mf-KVD">
-                    <rect key="frame" x="104" y="177" width="93" height="30"/>
-                    <state key="normal" title="I got declined"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bH7-Mf-KVD" customClass="ChunkyButton" customModule="Myles" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="99" width="300" height="30"/>
+                    <state key="normal" title="I was declined"/>
                     <connections>
                         <action selector="declined:" destination="iN0-l3-epB" eventType="touchUpInside" id="wUD-y0-fHT"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vB-io-Jga">
-                    <rect key="frame" x="101" y="135" width="99" height="30"/>
-                    <state key="normal" title="I got approved"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vB-io-Jga" customClass="ChunkyButton" customModule="Myles" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="57" width="300" height="30"/>
+                    <state key="normal" title="I was approved"/>
                     <connections>
                         <action selector="approved:" destination="iN0-l3-epB" eventType="touchUpInside" id="h95-AN-O1R"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What happened with your application?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQf-Vk-UHe">
-                    <rect key="frame" x="8" y="30" width="284" height="41"/>
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -34,13 +34,15 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="iQf-Vk-UHe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="7mN-Jb-fgL"/>
-                <constraint firstItem="bH7-Mf-KVD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KBp-TN-lP9"/>
+                <constraint firstItem="iQf-Vk-UHe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="75Y-zv-OHw"/>
                 <constraint firstItem="bH7-Mf-KVD" firstAttribute="top" secondItem="7vB-io-Jga" secondAttribute="bottom" constant="12" id="KJE-SB-bRv"/>
-                <constraint firstItem="iQf-Vk-UHe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="KhD-dr-ZP4"/>
-                <constraint firstAttribute="trailing" secondItem="iQf-Vk-UHe" secondAttribute="trailing" constant="8" id="Pyv-hu-I70"/>
-                <constraint firstItem="7vB-io-Jga" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="d6g-ku-Xs0"/>
-                <constraint firstItem="7vB-io-Jga" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ivz-jj-ECE"/>
+                <constraint firstItem="iQf-Vk-UHe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KhD-dr-ZP4"/>
+                <constraint firstItem="7vB-io-Jga" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OWn-gw-Mpl"/>
+                <constraint firstAttribute="trailing" secondItem="7vB-io-Jga" secondAttribute="trailing" id="UpP-U7-xvb"/>
+                <constraint firstAttribute="trailing" secondItem="bH7-Mf-KVD" secondAttribute="trailing" id="XCf-UL-1JP"/>
+                <constraint firstAttribute="trailing" secondItem="iQf-Vk-UHe" secondAttribute="trailing" id="kxN-7X-Rlu"/>
+                <constraint firstItem="7vB-io-Jga" firstAttribute="top" secondItem="iQf-Vk-UHe" secondAttribute="bottom" constant="36" id="mlV-wK-SEi"/>
+                <constraint firstItem="bH7-Mf-KVD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pbQ-fY-T6G"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>

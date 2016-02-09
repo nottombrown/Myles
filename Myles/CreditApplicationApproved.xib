@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -11,23 +11,27 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9E1-BD-SzR">
-                    <rect key="frame" x="105" y="135" width="90" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9E1-BD-SzR" customClass="ChunkyButton" customModule="Myles" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="77" width="300" height="30"/>
                     <state key="normal" title="I got my card"/>
                     <connections>
                         <action selector="delivered:" destination="iN0-l3-epB" eventType="touchUpInside" id="xXr-rh-x3S"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulations! Let us know when your card arrives." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a7-eS-toY">
-                    <rect key="frame" x="8" y="58" width="284" height="69"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations! Let us know when your card arrives." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a7-eS-toY">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="41"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <constraints>
-                <constraint firstItem="9E1-BD-SzR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HDl-IP-n25"/>
-                <constraint firstItem="9E1-BD-SzR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="nra-ZX-yDz"/>
+                <constraint firstItem="9E1-BD-SzR" firstAttribute="top" secondItem="3a7-eS-toY" secondAttribute="bottom" constant="36" id="AKj-Hn-nXh"/>
+                <constraint firstItem="3a7-eS-toY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="M1k-mN-gQR"/>
+                <constraint firstItem="9E1-BD-SzR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="W72-wx-IcP"/>
+                <constraint firstItem="3a7-eS-toY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YTH-cO-io7"/>
+                <constraint firstAttribute="trailing" secondItem="3a7-eS-toY" secondAttribute="trailing" id="c7D-cY-8Gw"/>
+                <constraint firstAttribute="trailing" secondItem="9E1-BD-SzR" secondAttribute="trailing" id="f8N-Pw-0ce"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="421" y="413"/>

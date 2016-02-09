@@ -12,7 +12,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This card has been canceled.Myles is elated." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ym5-rT-0sY">
-                    <rect key="frame" x="8" y="30" width="284" height="41"/>
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="41"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -20,9 +20,9 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Ym5-rT-0sY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="PIQ-1Q-eGS"/>
-                <constraint firstAttribute="trailing" secondItem="Ym5-rT-0sY" secondAttribute="trailing" constant="8" id="YUX-xS-GLO"/>
-                <constraint firstItem="Ym5-rT-0sY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="tjD-xU-xTI"/>
+                <constraint firstItem="Ym5-rT-0sY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PIQ-1Q-eGS"/>
+                <constraint firstAttribute="trailing" secondItem="Ym5-rT-0sY" secondAttribute="trailing" id="YUX-xS-GLO"/>
+                <constraint firstItem="Ym5-rT-0sY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tjD-xU-xTI"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
