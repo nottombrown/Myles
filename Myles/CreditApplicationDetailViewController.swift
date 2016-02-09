@@ -149,11 +149,12 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
             let approvedAt = creditApplication["approvedAt"] as! NSDate
             let feeAt = approvedAt.dateByAddingTimeInterval(360*(24*60*60))
             
+            let formatter = NSDateFormatter()
+            formatter.dateStyle = .MediumStyle
+            formatter.timeStyle = .MediumStyle
             
-            let calendar = NSCalendar.currentCalendar()
-            let components = calendar.components([.Day, .Month, .Year], fromDate: feeAt)
             
-            view.cancelInstructionLabel.text = "Remember to cancel this card before \(components.month) \(components.day), \(components.year)."
+            view.cancelInstructionLabel.text = "Remember to cancel this card before \(formatter.stringFromDate(feeAt))."
             view.creditApplication = creditApplication
             view.delegate = self
             renderStateView(view)
