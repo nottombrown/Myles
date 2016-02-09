@@ -181,5 +181,6 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
         self.setCorrectView()
         
         cardImage.file = creditApplication.offer?.image
+        cardImage.loadInBackground()
     }
 }
