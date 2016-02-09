@@ -10,8 +10,10 @@
             <connections>
                 <outlet property="applyButton" destination="plp-ry-Iz6" id="1XA-Cg-3Uq"/>
                 <outlet property="cardImage" destination="u5K-GL-Vcf" id="M5m-9m-9BE"/>
+                <outlet property="contentView" destination="chx-CF-2Om" id="jGz-c4-zsd"/>
                 <outlet property="requirementsLabel" destination="XxZ-Yi-ZCB" id="uwe-LO-MWd"/>
                 <outlet property="rewardExplanationLabel" destination="5B5-By-lwr" id="K9v-CU-BpX"/>
+                <outlet property="scrollView" destination="ncv-vb-9RJ" id="Zla-fa-8kB"/>
                 <outlet property="view" destination="iN0-l3-epB" id="zqj-5f-2dV"/>
             </connections>
         </placeholder>
@@ -20,89 +22,114 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u5K-GL-Vcf" customClass="PFImageView">
-                    <rect key="frame" x="28" y="28" width="318" height="177"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="u5K-GL-Vcf" secondAttribute="height" multiplier="160:89" id="d4z-uJ-igM"/>
-                    </constraints>
-                </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DE3-8K-5rd" userLabel="Details">
-                    <rect key="frame" x="28" y="221" width="319" height="136"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncv-vb-9RJ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WHAT YOU GET" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baf-Yf-uWl">
-                            <rect key="frame" x="0.0" y="10" width="319" height="18"/>
-                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="11"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Earn $500 if you spend $1000 within the first 6 months of having the card" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxZ-Yi-ZCB">
-                            <rect key="frame" x="0.0" y="94" width="319" height="36"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <color key="textColor" red="0.59999214020000002" green="0.59999214020000002" blue="0.59999214020000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Earn $500 if you spend $1000 within the first 6 months of having the card" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5B5-By-lwr">
-                            <rect key="frame" x="0.0" y="28" width="319" height="36"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <color key="textColor" red="0.59999214020000002" green="0.59999214020000002" blue="0.59999214020000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="HOW YOU GET IT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6a-a5-2gK">
-                            <rect key="frame" x="0.0" y="76" width="122" height="18"/>
-                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="11"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chx-CF-2Om" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u5K-GL-Vcf" customClass="PFImageView">
+                                    <rect key="frame" x="20" y="20" width="335" height="186"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="u5K-GL-Vcf" secondAttribute="height" multiplier="160:89" id="d4z-uJ-igM"/>
+                                    </constraints>
+                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1n-1E-YMI" userLabel="Button View">
+                                    <rect key="frame" x="20" y="350" width="335" height="126"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plp-ry-Iz6" customClass="ChunkyButton" customModule="Myles" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="48" width="335" height="30"/>
+                                            <state key="normal" title="Apply on Chase Sapphire Site">
+                                                <color key="titleColor" red="0.3411764706" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="apply:" destination="-1" eventType="touchUpInside" id="6JX-AG-Lzp"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="plp-ry-Iz6" secondAttribute="bottom" constant="48" id="P21-uH-vLM"/>
+                                        <constraint firstItem="plp-ry-Iz6" firstAttribute="top" secondItem="Q1n-1E-YMI" secondAttribute="top" constant="48" id="PYm-nh-AZC"/>
+                                        <constraint firstAttribute="trailing" secondItem="plp-ry-Iz6" secondAttribute="trailing" id="joT-lz-Xq4"/>
+                                        <constraint firstItem="plp-ry-Iz6" firstAttribute="leading" secondItem="Q1n-1E-YMI" secondAttribute="leading" id="psp-RP-nIQ"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DE3-8K-5rd" userLabel="Details">
+                                    <rect key="frame" x="20" y="214" width="335" height="136"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT YOU GET" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baf-Yf-uWl">
+                                            <rect key="frame" x="0.0" y="10" width="335" height="14"/>
+                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earn $500 if you spend $1000 within the first 6 months of having the card" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxZ-Yi-ZCB">
+                                            <rect key="frame" x="0.0" y="100" width="335" height="36"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.59999214020000002" green="0.59999214020000002" blue="0.59999214020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earn $500 if you spend $1000 within the first 6 months of having the card" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5B5-By-lwr">
+                                            <rect key="frame" x="0.0" y="27" width="335" height="36"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.59999214020000002" green="0.59999214020000002" blue="0.59999214020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW YOU GET IT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6a-a5-2gK">
+                                            <rect key="frame" x="0.0" y="83" width="97" height="14"/>
+                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="XxZ-Yi-ZCB" firstAttribute="top" secondItem="k6a-a5-2gK" secondAttribute="bottom" constant="3" id="4y7-T0-Fv0"/>
+                                        <constraint firstItem="k6a-a5-2gK" firstAttribute="leading" secondItem="baf-Yf-uWl" secondAttribute="leading" id="5FZ-IZ-ZD3"/>
+                                        <constraint firstItem="5B5-By-lwr" firstAttribute="leading" secondItem="baf-Yf-uWl" secondAttribute="leading" id="8op-YQ-5WB"/>
+                                        <constraint firstItem="XxZ-Yi-ZCB" firstAttribute="leading" secondItem="baf-Yf-uWl" secondAttribute="leading" id="VG6-ne-VCB"/>
+                                        <constraint firstItem="baf-Yf-uWl" firstAttribute="top" secondItem="DE3-8K-5rd" secondAttribute="top" constant="10" id="cEP-bG-uGT"/>
+                                        <constraint firstAttribute="bottom" secondItem="XxZ-Yi-ZCB" secondAttribute="bottom" id="jUN-2i-3hu"/>
+                                        <constraint firstItem="5B5-By-lwr" firstAttribute="top" secondItem="baf-Yf-uWl" secondAttribute="bottom" constant="3" id="mMF-My-xcg"/>
+                                        <constraint firstAttribute="trailing" secondItem="baf-Yf-uWl" secondAttribute="trailing" id="nxr-pG-zIH"/>
+                                        <constraint firstItem="k6a-a5-2gK" firstAttribute="top" secondItem="5B5-By-lwr" secondAttribute="bottom" constant="20" id="pPY-ue-B8t"/>
+                                        <constraint firstAttribute="trailing" secondItem="XxZ-Yi-ZCB" secondAttribute="trailing" id="ppe-xN-zGd"/>
+                                        <constraint firstAttribute="trailing" secondItem="5B5-By-lwr" secondAttribute="trailing" id="r5e-dt-ZXk"/>
+                                        <constraint firstItem="baf-Yf-uWl" firstAttribute="leading" secondItem="DE3-8K-5rd" secondAttribute="leading" id="sBq-vk-KHB"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="DE3-8K-5rd" secondAttribute="trailing" constant="20" id="3IL-7D-iuZ"/>
+                                <constraint firstItem="Q1n-1E-YMI" firstAttribute="leading" secondItem="chx-CF-2Om" secondAttribute="leading" constant="20" id="9p3-sv-P2S"/>
+                                <constraint firstItem="u5K-GL-Vcf" firstAttribute="leading" secondItem="chx-CF-2Om" secondAttribute="leading" constant="20" id="Kdk-h3-h3r"/>
+                                <constraint firstAttribute="trailing" secondItem="u5K-GL-Vcf" secondAttribute="trailing" constant="20" id="NMW-Y1-8Nl"/>
+                                <constraint firstItem="Q1n-1E-YMI" firstAttribute="top" secondItem="DE3-8K-5rd" secondAttribute="bottom" id="SS7-VA-fbE"/>
+                                <constraint firstItem="DE3-8K-5rd" firstAttribute="leading" secondItem="chx-CF-2Om" secondAttribute="leading" constant="20" id="YET-jr-KRH"/>
+                                <constraint firstItem="u5K-GL-Vcf" firstAttribute="top" secondItem="chx-CF-2Om" secondAttribute="top" constant="20" id="mU3-G1-sMd"/>
+                                <constraint firstItem="DE3-8K-5rd" firstAttribute="top" secondItem="u5K-GL-Vcf" secondAttribute="bottom" constant="8" id="mUT-dQ-Wxc"/>
+                                <constraint firstAttribute="trailing" secondItem="Q1n-1E-YMI" secondAttribute="trailing" constant="20" id="uH8-LG-dIM"/>
+                            </constraints>
+                        </view>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="XxZ-Yi-ZCB" firstAttribute="top" secondItem="k6a-a5-2gK" secondAttribute="bottom" constant="3" id="4y7-T0-Fv0"/>
-                        <constraint firstItem="k6a-a5-2gK" firstAttribute="leading" secondItem="baf-Yf-uWl" secondAttribute="leading" id="5FZ-IZ-ZD3"/>
-                        <constraint firstItem="5B5-By-lwr" firstAttribute="leading" secondItem="baf-Yf-uWl" secondAttribute="leading" id="8op-YQ-5WB"/>
-                        <constraint firstItem="XxZ-Yi-ZCB" firstAttribute="leading" secondItem="baf-Yf-uWl" secondAttribute="leading" id="VG6-ne-VCB"/>
-                        <constraint firstItem="baf-Yf-uWl" firstAttribute="top" secondItem="DE3-8K-5rd" secondAttribute="top" constant="10" id="cEP-bG-uGT"/>
-                        <constraint firstAttribute="bottom" secondItem="XxZ-Yi-ZCB" secondAttribute="bottom" id="jUN-2i-3hu"/>
-                        <constraint firstItem="5B5-By-lwr" firstAttribute="top" secondItem="baf-Yf-uWl" secondAttribute="bottom" constant="3" id="mMF-My-xcg"/>
-                        <constraint firstAttribute="trailing" secondItem="baf-Yf-uWl" secondAttribute="trailing" id="nxr-pG-zIH"/>
-                        <constraint firstItem="k6a-a5-2gK" firstAttribute="top" secondItem="5B5-By-lwr" secondAttribute="bottom" constant="20" id="pPY-ue-B8t"/>
-                        <constraint firstAttribute="trailing" secondItem="XxZ-Yi-ZCB" secondAttribute="trailing" id="ppe-xN-zGd"/>
-                        <constraint firstAttribute="trailing" secondItem="5B5-By-lwr" secondAttribute="trailing" id="r5e-dt-ZXk"/>
-                        <constraint firstItem="baf-Yf-uWl" firstAttribute="leading" secondItem="DE3-8K-5rd" secondAttribute="leading" id="sBq-vk-KHB"/>
+                        <constraint firstItem="chx-CF-2Om" firstAttribute="leading" secondItem="ncv-vb-9RJ" secondAttribute="leading" id="1YN-VC-Os4"/>
+                        <constraint firstItem="chx-CF-2Om" firstAttribute="top" secondItem="ncv-vb-9RJ" secondAttribute="top" id="Adb-3b-Jir"/>
+                        <constraint firstAttribute="bottom" secondItem="chx-CF-2Om" secondAttribute="bottom" id="Wqm-D9-k7P"/>
+                        <constraint firstItem="chx-CF-2Om" firstAttribute="centerY" secondItem="ncv-vb-9RJ" secondAttribute="centerY" id="eht-TJ-kCA"/>
+                        <constraint firstItem="chx-CF-2Om" firstAttribute="centerX" secondItem="ncv-vb-9RJ" secondAttribute="centerX" id="yqI-pR-k1y"/>
+                        <constraint firstAttribute="trailing" secondItem="chx-CF-2Om" secondAttribute="trailing" id="zgJ-xc-mX5"/>
                     </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzQ-Lk-N7q" userLabel="Button Container">
-                    <rect key="frame" x="0.0" y="357" width="375" height="310"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plp-ry-Iz6" customClass="ChunkyButton" customModule="Myles" customModuleProvider="target">
-                            <rect key="frame" x="86" y="140" width="203" height="30"/>
-                            <state key="normal" title="Apply on Chase Sapphire Site">
-                                <color key="titleColor" red="0.3411764706" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="apply:" destination="-1" eventType="touchUpInside" id="6JX-AG-Lzp"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstItem="plp-ry-Iz6" firstAttribute="centerX" secondItem="rzQ-Lk-N7q" secondAttribute="centerX" id="8u8-PM-luk"/>
-                        <constraint firstItem="plp-ry-Iz6" firstAttribute="centerY" secondItem="rzQ-Lk-N7q" secondAttribute="centerY" id="oGt-UU-i33"/>
-                    </constraints>
-                </view>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="rzQ-Lk-N7q" secondAttribute="bottom" id="5vB-j1-4zA"/>
-                <constraint firstItem="DE3-8K-5rd" firstAttribute="top" secondItem="u5K-GL-Vcf" secondAttribute="bottom" constant="16" id="Cjt-DQ-O7e"/>
-                <constraint firstAttribute="trailing" secondItem="rzQ-Lk-N7q" secondAttribute="trailing" id="H3c-BB-7tM"/>
-                <constraint firstItem="rzQ-Lk-N7q" firstAttribute="top" secondItem="DE3-8K-5rd" secondAttribute="bottom" id="M2g-t9-JEt"/>
-                <constraint firstItem="rzQ-Lk-N7q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="aWD-6A-cXY"/>
-                <constraint firstItem="DE3-8K-5rd" firstAttribute="leading" secondItem="u5K-GL-Vcf" secondAttribute="leading" id="dWo-y1-Cj3"/>
-                <constraint firstItem="u5K-GL-Vcf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="28" id="j3z-p3-JUk"/>
-                <constraint firstItem="u5K-GL-Vcf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="28" id="jJQ-fx-UJQ"/>
-                <constraint firstItem="u5K-GL-Vcf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jQN-R5-6wM"/>
-                <constraint firstAttribute="trailing" secondItem="DE3-8K-5rd" secondAttribute="trailing" constant="28" id="oLC-Lk-xIU"/>
-                <constraint firstItem="plp-ry-Iz6" firstAttribute="leading" secondItem="u5K-GL-Vcf" secondAttribute="leading" id="zN9-HK-Lkh"/>
+                <constraint firstAttribute="trailing" secondItem="ncv-vb-9RJ" secondAttribute="trailing" id="8Bj-bc-BuL"/>
+                <constraint firstAttribute="bottom" secondItem="ncv-vb-9RJ" secondAttribute="bottom" id="WQh-cX-fuV"/>
+                <constraint firstItem="ncv-vb-9RJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fdb-Qg-iCb"/>
+                <constraint firstItem="ncv-vb-9RJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mRZ-5w-NqV"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>

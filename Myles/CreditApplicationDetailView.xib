@@ -18,25 +18,55 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lgu-Bc-EOW" customClass="PFImageView">
-                    <rect key="frame" x="28" y="28" width="318" height="177"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAq-8b-bXW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G21-b0-WSD" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lgu-Bc-EOW" customClass="PFImageView">
+                                    <rect key="frame" x="20" y="20" width="335" height="186"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="lgu-Bc-EOW" secondAttribute="height" multiplier="160:89" id="Fgw-Og-LL5"/>
+                                    </constraints>
+                                </imageView>
+                                <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4U-oj-xhn">
+                                    <rect key="frame" x="20" y="234" width="335" height="400"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="400" id="FlZ-KT-faE"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="lgu-Bc-EOW" secondAttribute="trailing" constant="20" id="OxU-7m-fC8"/>
+                                <constraint firstItem="t4U-oj-xhn" firstAttribute="top" secondItem="lgu-Bc-EOW" secondAttribute="bottom" constant="28" id="cNl-Le-0rO"/>
+                                <constraint firstItem="t4U-oj-xhn" firstAttribute="trailing" secondItem="lgu-Bc-EOW" secondAttribute="trailing" id="e5M-iG-Eqb"/>
+                                <constraint firstItem="t4U-oj-xhn" firstAttribute="leading" secondItem="lgu-Bc-EOW" secondAttribute="leading" id="n5N-sD-l9P"/>
+                                <constraint firstItem="lgu-Bc-EOW" firstAttribute="top" secondItem="G21-b0-WSD" secondAttribute="top" constant="20" id="pEC-gj-23G"/>
+                                <constraint firstItem="lgu-Bc-EOW" firstAttribute="leading" secondItem="G21-b0-WSD" secondAttribute="leading" constant="20" id="rTV-8x-FbJ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="lgu-Bc-EOW" secondAttribute="height" multiplier="160:89" id="Fgw-Og-LL5"/>
+                        <constraint firstItem="G21-b0-WSD" firstAttribute="top" secondItem="LAq-8b-bXW" secondAttribute="top" id="1nD-a1-UjZ"/>
+                        <constraint firstItem="G21-b0-WSD" firstAttribute="leading" secondItem="LAq-8b-bXW" secondAttribute="leading" id="G53-Qu-Xg6"/>
+                        <constraint firstItem="G21-b0-WSD" firstAttribute="top" secondItem="LAq-8b-bXW" secondAttribute="top" id="HZj-Up-IRm"/>
+                        <constraint firstItem="G21-b0-WSD" firstAttribute="leading" secondItem="LAq-8b-bXW" secondAttribute="leading" id="IdP-bI-7gg"/>
+                        <constraint firstItem="G21-b0-WSD" firstAttribute="centerY" secondItem="LAq-8b-bXW" secondAttribute="centerY" id="Njk-WF-qPW"/>
+                        <constraint firstItem="G21-b0-WSD" firstAttribute="centerX" secondItem="LAq-8b-bXW" secondAttribute="centerX" id="czI-sG-fft"/>
+                        <constraint firstAttribute="trailing" secondItem="G21-b0-WSD" secondAttribute="trailing" id="hwP-f6-mXI"/>
+                        <constraint firstAttribute="trailing" secondItem="G21-b0-WSD" secondAttribute="trailing" id="vfw-t5-iQI"/>
+                        <constraint firstAttribute="bottom" secondItem="G21-b0-WSD" secondAttribute="bottom" id="xfZ-hM-Rx7"/>
                     </constraints>
-                </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4U-oj-xhn">
-                    <rect key="frame" x="28" y="233" width="319" height="434"/>
-                </view>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="lgu-Bc-EOW" firstAttribute="centerX" secondItem="EsS-iA-Vl0" secondAttribute="centerX" id="Ety-a7-ycN"/>
-                <constraint firstItem="t4U-oj-xhn" firstAttribute="top" secondItem="lgu-Bc-EOW" secondAttribute="bottom" constant="28" id="eUK-hx-Xlb"/>
-                <constraint firstItem="lgu-Bc-EOW" firstAttribute="leading" secondItem="EsS-iA-Vl0" secondAttribute="leading" constant="28" id="o5Y-93-S0B"/>
-                <constraint firstItem="t4U-oj-xhn" firstAttribute="leading" secondItem="lgu-Bc-EOW" secondAttribute="leading" id="ofe-Os-UvK"/>
-                <constraint firstAttribute="bottom" secondItem="t4U-oj-xhn" secondAttribute="bottom" id="uyT-5m-Q51"/>
-                <constraint firstItem="t4U-oj-xhn" firstAttribute="centerX" secondItem="EsS-iA-Vl0" secondAttribute="centerX" id="vjp-Ee-lg9"/>
-                <constraint firstItem="lgu-Bc-EOW" firstAttribute="top" secondItem="EsS-iA-Vl0" secondAttribute="top" constant="28" id="yHQ-ao-xZV"/>
+                <constraint firstItem="LAq-8b-bXW" firstAttribute="top" secondItem="EsS-iA-Vl0" secondAttribute="top" id="D9h-Mt-Ee5"/>
+                <constraint firstItem="LAq-8b-bXW" firstAttribute="leading" secondItem="EsS-iA-Vl0" secondAttribute="leading" id="R8y-wi-nhg"/>
+                <constraint firstAttribute="trailing" secondItem="LAq-8b-bXW" secondAttribute="trailing" id="esK-5J-hJL"/>
+                <constraint firstAttribute="bottom" secondItem="LAq-8b-bXW" secondAttribute="bottom" id="vrL-7R-ei6"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>

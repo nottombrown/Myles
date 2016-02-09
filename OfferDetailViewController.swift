@@ -14,6 +14,9 @@ class OfferDetailViewController: UIViewController {
     @IBOutlet weak var requirementsLabel: UILabel!
     @IBOutlet weak var rewardExplanationLabel: UILabel!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
+    
     let offer: Offer
     
     init(offer: Offer) {
@@ -50,6 +53,19 @@ class OfferDetailViewController: UIViewController {
         let boldString = NSMutableAttributedString(string: boldText, attributes: attributes)
         boldString.appendAttributedString(attributedString)
         return boldString
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        var aggregateView = CGRect()
+        for view in contentView.subviews {
+            aggregateView.unionInPlace(view.frame)
+        }
+        
+        contentView.frame = aggregateView
+        scrollView.contentSize = contentView.frame.size
+        
     }
     
     @IBAction func apply(sender: AnyObject) {
