@@ -58,13 +58,10 @@ class OfferDetailViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        var aggregateView = CGRect()
-        for view in contentView.subviews {
-            aggregateView.unionInPlace(view.frame)
-        }
+        let aggregateView = contentView.subviews.reduce(CGRect())
+            { aggRect, view in aggRect.union(view.frame) }
         
-        contentView.frame = aggregateView
-        scrollView.contentSize = contentView.frame.size
+        scrollView.contentSize = aggregateView.size
         
     }
     
