@@ -16,7 +16,6 @@ class CreditApplicationsTableViewController: MylesTableViewController {
         query?.includeKey("offer")
         query?.whereKey("user", equalTo: PFUser.currentUser()!)
         query?.whereKeyDoesNotExist("approvedAt")
-        query?.whereKeyDoesNotExist("declinedAt")
         query?.addDescendingOrder("appliedAt")
         return query!
     }
