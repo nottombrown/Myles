@@ -16,6 +16,8 @@ class CreditApplicationDeclined: UIView {
     var delegate:CreditApplicationDeclinedDelegate?
     var creditApplication:CreditApplication?
     
+    @IBOutlet weak var declinedInstructionLabel: UILabel!
+    @IBOutlet weak var reapplyInstructionLabel: UILabel!
     @IBAction func reapply(sender: AnyObject) {
         self.delegate?.creditApplicationReapplied()
     }
