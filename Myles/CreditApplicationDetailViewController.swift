@@ -25,9 +25,12 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
     }
     
     func creditApplicationReapplied() {
-        creditApplication["declinedAt"] = nil
+        creditApplication["declinedAt"] = NSNull()
         creditApplication["appliedAt"] = NSDate()
         creditApplication.saveEventually()
+        let offer = creditApplication["offer"] as! Offer
+        let link = offer["link"] as! String!
+        UIApplication.sharedApplication().openURL(NSURL(string: link)!)
         self.setCorrectView()
     }
     
@@ -80,33 +83,33 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
         
         let bundle = NSBundle.mainBundle()
 
-        if creditApplication["approvedAt"] == nil && creditApplication["declinedAt"] == nil {
+        if creditApplication["approvedAt"] as? NSDate == nil && creditApplication["declinedAt"] as? NSDate == nil {
             let view = bundle.loadNibNamed("CreditApplicationPending", owner: self, options: nil)[0] as! CreditApplicationPending
             view.delegate = self
             view.creditApplication = creditApplication
             renderStateView(view)
             print("pending")
-        } else if creditApplication["declinedAt"] != nil {
+        } else if creditApplication["declinedAt"] as? NSDate != nil {
             let view = bundle.loadNibNamed("CreditApplicationDeclined", owner: self, options: nil)[0] as! CreditApplicationDeclined
             view.delegate = self
             view.creditApplication = creditApplication
             view.declinedInstructionLabel.text = "No worries. It happens all the time. You should reapply in X months."
             renderStateView(view)
             print("declined")
-        } else if creditApplication["deliveredAt"] == nil {
+        } else if creditApplication["deliveredAt"] as? NSDate == nil {
             let view = bundle.loadNibNamed("CreditApplicationApproved", owner: self, options: nil)[0] as! CreditApplicationApproved
             view.delegate = self
             view.creditApplication = creditApplication
             renderStateView(view)
             print("awaiting delivery")
-        } else if creditApplication["hitBonusAt"] == nil && creditApplication["missedBonusAt"] == nil {
+        } else if creditApplication["hitBonusAt"] as? NSDate == nil && creditApplication["missedBonusAt"] as? NSDate == nil {
             let view = bundle.loadNibNamed("CreditApplicationDelivered", owner: self, options: nil)[0] as! CreditApplicationDelivered
             view.bonusInstructionLabel.text = "You have 30 days left to spend $2k"
             view.creditApplication = creditApplication
             view.delegate = self
             renderStateView(view)
             print("delivered")
-        } else if creditApplication["canceledAt"] == nil {
+        } else if creditApplication["canceledAt"] as? NSDate == nil {
             let view = bundle.loadNibNamed("CreditApplicationLive", owner: self, options: nil)[0] as! CreditApplicationLive
             view.cancelInstructionLabel.text = "Remember to cancel this card before DATE"
             view.creditApplication = creditApplication
