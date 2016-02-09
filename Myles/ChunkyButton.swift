@@ -19,6 +19,8 @@ class ChunkyButton: SimpleButton {
         setBorderColor(highlightColor, forState: .Normal)
 
         setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        setCornerRadius(2.0)
+        setCornerRadius(6.0)
+        
+        self.contentEdgeInsets = UIEdgeInsetsMake(18, 0, 18, 0)
     }
 }

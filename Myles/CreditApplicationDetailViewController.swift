@@ -128,15 +128,15 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
             let offerEndsAt = approvedAt.dateByAddingTimeInterval(NSTimeInterval(timeLimit*24*60*60))
             let ti = offerEndsAt.timeIntervalSinceNow
             let days = Int(ceil(ti / (24*60*60)))
-            let s = offer["condition"] as! String
+            let s = (offer["condition"] as! String).lowercaseString
             
             if ti <= 0 {
                 view.bonusInstructionLabel.text = "You are out of time to \(s). Did you hit the bonus?"
             } else {
                 if days < 2 {
-                    view.bonusInstructionLabel.text = "You have 1 day left to \(s)!"
+                    view.bonusInstructionLabel.text = "You have 1 day left to \(s)! Complete this to earn the bonus of \(offer.reward!)."
                 } else {
-                    view.bonusInstructionLabel.text = "You have \(days) days left to \(s)."
+                    view.bonusInstructionLabel.text = "You have \(days) days left to \(s). Complete this to earn the bonus of \(offer.reward!)."
                 }
             }
             
@@ -148,7 +148,12 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
             let view = bundle.loadNibNamed("CreditApplicationLive", owner: self, options: nil)[0] as! CreditApplicationLive
             let approvedAt = creditApplication["approvedAt"] as! NSDate
             let feeAt = approvedAt.dateByAddingTimeInterval(360*(24*60*60))
-            view.cancelInstructionLabel.text = "Remember to cancel this card before \(feeAt)."
+            
+            
+            let calendar = NSCalendar.currentCalendar()
+            let components = calendar.components([.Day, .Month, .Year], fromDate: feeAt)
+            
+            view.cancelInstructionLabel.text = "Remember to cancel this card before \(components.month) \(components.day), \(components.year)."
             view.creditApplication = creditApplication
             view.delegate = self
             renderStateView(view)
