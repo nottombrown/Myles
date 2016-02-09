@@ -56,12 +56,18 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
     func creditApplicationBonusHit() {
         creditApplication["hitBonusAt"] = NSDate()
         creditApplication.saveEventually()
+        let alert = UIAlertController(title: "Woohoo!", message:"You're awesome.", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "I know.", style: .Default) { _ in })
+        self.presentViewController(alert, animated: true){}
         self.setCorrectView()
     }
     
     func creditApplicationBonusMissed() {
         creditApplication["missedBonusAt"] = NSDate()
         creditApplication.saveEventually()
+        let alert = UIAlertController(title: "Man...", message:"Get your shit together.", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Boohoo.", style: .Default) { _ in })
+        self.presentViewController(alert, animated: true){}
         self.setCorrectView()
     }
     
