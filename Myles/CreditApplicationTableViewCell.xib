@@ -65,9 +65,11 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="DSJ-eT-ojZ" secondAttribute="bottom" constant="3" id="5dA-v3-vHu"/>
                     <constraint firstItem="DSJ-eT-ojZ" firstAttribute="leading" secondItem="0f0-Co-ala" secondAttribute="leadingMargin" id="8yK-Kf-zUW"/>
                     <constraint firstItem="xsC-EB-Tkh" firstAttribute="bottom" secondItem="DSJ-eT-ojZ" secondAttribute="bottom" id="B7e-iy-Xq7"/>
                     <constraint firstItem="DSJ-eT-ojZ" firstAttribute="centerY" secondItem="0f0-Co-ala" secondAttribute="centerY" id="KYJ-Vd-Zko"/>
+                    <constraint firstItem="DSJ-eT-ojZ" firstAttribute="top" secondItem="0f0-Co-ala" secondAttribute="topMargin" constant="3" id="Yu6-3q-bxz"/>
                     <constraint firstItem="xsC-EB-Tkh" firstAttribute="top" secondItem="0f0-Co-ala" secondAttribute="topMargin" constant="3" id="Zsv-oq-fu4"/>
                     <constraint firstItem="xsC-EB-Tkh" firstAttribute="top" secondItem="DSJ-eT-ojZ" secondAttribute="top" id="hsF-fU-cki"/>
                     <constraint firstItem="xsC-EB-Tkh" firstAttribute="leading" secondItem="DSJ-eT-ojZ" secondAttribute="trailing" constant="12" id="nXb-fU-Pjg"/>
