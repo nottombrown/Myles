@@ -41,7 +41,9 @@ class OfferDetailViewController: UIViewController {
         applyButton.setTitle("Apply for \(offer.name!)", forState: .Normal)
         
         rewardExplanationLabel.attributedText = rewardAttributedString()
-        requirementsLabel.text = "\(offer.condition ?? "All you need is to be approved"). We'll walk you through canceling the card afterwards."
+        let timeLimit = offer["timeLimit"] as! Int
+        let condition = offer["condition"] as! String
+        requirementsLabel.text = "\(condition) in \(timeLimit) days. We'll walk you through canceling the card afterwards."
     }
     
     func rewardAttributedString() -> NSAttributedString {

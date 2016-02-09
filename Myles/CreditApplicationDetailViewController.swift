@@ -124,19 +124,19 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
             let view = bundle.loadNibNamed("CreditApplicationDelivered", owner: self, options: nil)[0] as! CreditApplicationDelivered
             let offer = creditApplication["offer"] as! Offer
             let timeLimit = offer["timeLimit"] as! Int
-            let spend = offer["spend"] as! Int
             let approvedAt = creditApplication["approvedAt"] as! NSDate
             let offerEndsAt = approvedAt.dateByAddingTimeInterval(NSTimeInterval(timeLimit*24*60*60))
             let ti = offerEndsAt.timeIntervalSinceNow
             let days = Int(ceil(ti / (24*60*60)))
-            let s = "$\(spend/1000)k"
+            let s = offer["condition"] as! String
+            
             if ti <= 0 {
-                view.bonusInstructionLabel.text = "You are out of time to hit your spend target of \(s). Did you hit the bonus?"
+                view.bonusInstructionLabel.text = "You are out of time to \(s). Did you hit the bonus?"
             } else {
                 if days < 2 {
-                    view.bonusInstructionLabel.text = "You have 1 day left to spend \(s)!"
+                    view.bonusInstructionLabel.text = "You have 1 day left to \(s)!"
                 } else {
-                    view.bonusInstructionLabel.text = "You have \(days) days left to spend \(s)."
+                    view.bonusInstructionLabel.text = "You have \(days) days left to \(s)."
                 }
             }
             
