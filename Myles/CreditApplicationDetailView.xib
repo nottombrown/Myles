@@ -9,6 +9,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreditApplicationDetailViewController" customModule="Myles" customModuleProvider="target">
             <connections>
                 <outlet property="cardImage" destination="lgu-Bc-EOW" id="yKB-18-gZD"/>
+                <outlet property="contentView" destination="G21-b0-WSD" id="evE-K3-rXk"/>
+                <outlet property="scrollView" destination="LAq-8b-bXW" id="B1s-qi-Mgu"/>
                 <outlet property="stateView" destination="t4U-oj-xhn" id="49J-p6-nbW"/>
                 <outlet property="view" destination="EsS-iA-Vl0" id="fPE-3Y-hI8"/>
             </connections>
@@ -18,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAq-8b-bXW">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAq-8b-bXW">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G21-b0-WSD" userLabel="Content View">
@@ -39,13 +41,22 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="t4U-oj-xhn" firstAttribute="centerX" secondItem="G21-b0-WSD" secondAttribute="centerX" id="77n-xR-5sZ"/>
                                 <constraint firstAttribute="trailing" secondItem="lgu-Bc-EOW" secondAttribute="trailing" constant="20" id="OxU-7m-fC8"/>
+                                <constraint firstAttribute="trailing" secondItem="t4U-oj-xhn" secondAttribute="trailing" constant="20" id="b8Z-zA-gIB"/>
                                 <constraint firstItem="t4U-oj-xhn" firstAttribute="top" secondItem="lgu-Bc-EOW" secondAttribute="bottom" constant="28" id="cNl-Le-0rO"/>
                                 <constraint firstItem="t4U-oj-xhn" firstAttribute="trailing" secondItem="lgu-Bc-EOW" secondAttribute="trailing" id="e5M-iG-Eqb"/>
+                                <constraint firstItem="t4U-oj-xhn" firstAttribute="leading" secondItem="G21-b0-WSD" secondAttribute="leading" constant="20" id="jgd-le-4m5"/>
                                 <constraint firstItem="t4U-oj-xhn" firstAttribute="leading" secondItem="lgu-Bc-EOW" secondAttribute="leading" id="n5N-sD-l9P"/>
                                 <constraint firstItem="lgu-Bc-EOW" firstAttribute="top" secondItem="G21-b0-WSD" secondAttribute="top" constant="20" id="pEC-gj-23G"/>
                                 <constraint firstItem="lgu-Bc-EOW" firstAttribute="leading" secondItem="G21-b0-WSD" secondAttribute="leading" constant="20" id="rTV-8x-FbJ"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="e5M-iG-Eqb"/>
+                                    <exclude reference="n5N-sD-l9P"/>
+                                </mask>
+                            </variation>
                         </view>
                     </subviews>
                     <constraints>
@@ -59,6 +70,13 @@
                         <constraint firstAttribute="trailing" secondItem="G21-b0-WSD" secondAttribute="trailing" id="vfw-t5-iQI"/>
                         <constraint firstAttribute="bottom" secondItem="G21-b0-WSD" secondAttribute="bottom" id="xfZ-hM-Rx7"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="1nD-a1-UjZ"/>
+                            <exclude reference="IdP-bI-7gg"/>
+                            <exclude reference="vfw-t5-iQI"/>
+                        </mask>
+                    </variation>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

@@ -517,7 +517,6 @@
 				77CBD6181C56B62100CD377B /* CreditApplicationApproved.swift in Sources */,
 				82F1DCBD1C50024A008C7FFB /* OffersTableViewController.swift in Sources */,
 				82C20D021C6A61AF004EC138 /* ChunkyButton.swift in Sources */,
-				772E90DF1C56A2EA004CF542 /* User.swift in Sources */,
 				82C20D101C6A679D004EC138 /* SimpleButtonStateChangeValue.swift in Sources */,
 				82F1DCD01C505935008C7FFB /* MylesTableViewController.swift in Sources */,
 				82F1DCCC1C50240F008C7FFB /* OfferDetailViewController.swift in Sources */,

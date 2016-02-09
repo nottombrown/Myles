@@ -11,6 +11,8 @@ import Foundation
 class CreditApplicationDetailViewController: UIViewController, CreditApplicationPendingDelegate, CreditApplicationDeclinedDelegate, CreditApplicationApprovedDelegate, CreditApplicationDeliveredDelegate, CreditApplicationLiveDelegate {
     @IBOutlet weak var cardImage: PFImageView!
     @IBOutlet weak var stateView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
     
     let creditApplication: CreditApplication
     
@@ -74,8 +76,8 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
     }
     
     func renderStateView(view:UIView!) {
-        self.stateView.addSubview(view)
         view.frame = stateView.bounds
+        self.stateView.addSubview(view)
     }
     
     func alert(title:String!, message:String!, actionTitle:String!) {
@@ -158,6 +160,14 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
             print("canceled")
         }
         self.view.setNeedsDisplay()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        let aggregateView = contentView.subviews.reduce(CGRect())
+            { aggRect, view in aggRect.union(view.frame) }
+        scrollView.contentSize = aggregateView.size
     }
     
     override func viewDidLoad() {
