@@ -29,6 +29,12 @@
 		82B944A71C4F39780017A60B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B944A51C4F39780017A60B /* LaunchScreen.storyboard */; };
 		82B944B21C4F39780017A60B /* MylesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B944B11C4F39780017A60B /* MylesTests.swift */; };
 		82B944BD1C4F39780017A60B /* MylesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B944BC1C4F39780017A60B /* MylesUITests.swift */; };
+		82C20D021C6A61AF004EC138 /* ChunkyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C20D011C6A61AF004EC138 /* ChunkyButton.swift */; };
+		82C20D041C6A623E004EC138 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C20D031C6A623E004EC138 /* Colors.swift */; };
+		82C20D0D1C6A679D004EC138 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82C20D081C6A679D004EC138 /* Info.plist */; };
+		82C20D0E1C6A679D004EC138 /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C20D0A1C6A679D004EC138 /* SimpleButton.swift */; };
+		82C20D0F1C6A679D004EC138 /* SimpleButtonControlState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C20D0B1C6A679D004EC138 /* SimpleButtonControlState.swift */; };
+		82C20D101C6A679D004EC138 /* SimpleButtonStateChangeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C20D0C1C6A679D004EC138 /* SimpleButtonStateChangeValue.swift */; };
 		82D346F81C4FFCAB00253FA1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D346F61C4FFCAB00253FA1 /* Bolts.framework */; };
 		82D346F91C4FFCAB00253FA1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D346F61C4FFCAB00253FA1 /* Bolts.framework */; };
 		82D346FA1C4FFCAB00253FA1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D346F61C4FFCAB00253FA1 /* Bolts.framework */; };
@@ -108,6 +114,13 @@
 		82B944B81C4F39780017A60B /* MylesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MylesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B944BC1C4F39780017A60B /* MylesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MylesUITests.swift; sourceTree = "<group>"; };
 		82B944BE1C4F39780017A60B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82C20D011C6A61AF004EC138 /* ChunkyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChunkyButton.swift; sourceTree = "<group>"; };
+		82C20D031C6A623E004EC138 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		82C20D081C6A679D004EC138 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82C20D091C6A679D004EC138 /* SimpleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleButton.h; sourceTree = "<group>"; };
+		82C20D0A1C6A679D004EC138 /* SimpleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleButton.swift; sourceTree = "<group>"; };
+		82C20D0B1C6A679D004EC138 /* SimpleButtonControlState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleButtonControlState.swift; sourceTree = "<group>"; };
+		82C20D0C1C6A679D004EC138 /* SimpleButtonStateChangeValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleButtonStateChangeValue.swift; sourceTree = "<group>"; };
 		82D346F61C4FFCAB00253FA1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		82D346F71C4FFCAB00253FA1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		82D346FE1C4FFCE300253FA1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -187,6 +200,7 @@
 			children = (
 				772E90DE1C56A2EA004CF542 /* User.swift */,
 				82E7796C1C59453100C74C54 /* TimeAgo.swift */,
+				82C20D031C6A623E004EC138 /* Colors.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -268,6 +282,18 @@
 			path = MylesUITests;
 			sourceTree = "<group>";
 		};
+		82C20D071C6A679D004EC138 /* SimpleButton */ = {
+			isa = PBXGroup;
+			children = (
+				82C20D081C6A679D004EC138 /* Info.plist */,
+				82C20D091C6A679D004EC138 /* SimpleButton.h */,
+				82C20D0A1C6A679D004EC138 /* SimpleButton.swift */,
+				82C20D0B1C6A679D004EC138 /* SimpleButtonControlState.swift */,
+				82C20D0C1C6A679D004EC138 /* SimpleButtonStateChangeValue.swift */,
+			);
+			path = SimpleButton;
+			sourceTree = "<group>";
+		};
 		82D346F51C4FFC9B00253FA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +339,8 @@
 		82F1DCCE1C505904008C7FFB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				82C20D071C6A679D004EC138 /* SimpleButton */,
+				82C20D011C6A61AF004EC138 /* ChunkyButton.swift */,
 				82F1DCD71C505FB7008C7FFB /* CreditApplicationDetailView.xib */,
 				776BA2991C56AE1500AB2995 /* CreditApplicationStates */,
 				77B9DE641C50093A00D2F174 /* CreditApplicationTableViewCell.swift */,
@@ -434,6 +462,7 @@
 				77B9DE671C50194A00D2F174 /* CreditApplicationTableViewCell.xib in Resources */,
 				82F1DCC81C5023A4008C7FFB /* OfferDetailView.xib in Resources */,
 				82B944A71C4F39780017A60B /* LaunchScreen.storyboard in Resources */,
+				82C20D0D1C6A679D004EC138 /* Info.plist in Resources */,
 				776BA29D1C56AE4C00AB2995 /* CreditApplicationDelivered.xib in Resources */,
 				82B944A41C4F39780017A60B /* Assets.xcassets in Resources */,
 				776BA2A31C56AEC400AB2995 /* CreditApplicationCanceled.xib in Resources */,
@@ -469,17 +498,22 @@
 				82F1DCD21C505ABE008C7FFB /* ProfileTableViewController.swift in Sources */,
 				77CBD61A1C56B7BF00CD377B /* CreditApplicationDelivered.swift in Sources */,
 				77B9DE651C50093A00D2F174 /* CreditApplicationTableViewCell.swift in Sources */,
+				82C20D0F1C6A679D004EC138 /* SimpleButtonControlState.swift in Sources */,
 				82F1DCC01C5002E6008C7FFB /* Offer.swift in Sources */,
+				82C20D0E1C6A679D004EC138 /* SimpleButton.swift in Sources */,
 				77CBD6201C56CC1500CD377B /* CreditApplicationDeclined.swift in Sources */,
 				77CBD61C1C56B8B200CD377B /* CreditApplicationLive.swift in Sources */,
 				82F1DCD61C505F45008C7FFB /* CreditApplicationDetailViewController.swift in Sources */,
 				82E7796D1C59453100C74C54 /* TimeAgo.swift in Sources */,
 				82F1DCC21C5003CE008C7FFB /* OfferTableViewCell.swift in Sources */,
+				82C20D041C6A623E004EC138 /* Colors.swift in Sources */,
 				82B9449D1C4F39780017A60B /* AppDelegate.swift in Sources */,
 				82F1DCD41C505AE2008C7FFB /* CreditApplicationsTableViewController.swift in Sources */,
 				77CBD6181C56B62100CD377B /* CreditApplicationApproved.swift in Sources */,
 				82F1DCBD1C50024A008C7FFB /* OffersTableViewController.swift in Sources */,
+				82C20D021C6A61AF004EC138 /* ChunkyButton.swift in Sources */,
 				772E90DF1C56A2EA004CF542 /* User.swift in Sources */,
+				82C20D101C6A679D004EC138 /* SimpleButtonStateChangeValue.swift in Sources */,
 				82F1DCD01C505935008C7FFB /* MylesTableViewController.swift in Sources */,
 				82F1DCCC1C50240F008C7FFB /* OfferDetailViewController.swift in Sources */,
 				77CBD61E1C56B96300CD377B /* CreditApplicationCanceled.swift in Sources */,
