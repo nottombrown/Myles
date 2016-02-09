@@ -56,18 +56,14 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
     func creditApplicationBonusHit() {
         creditApplication["hitBonusAt"] = NSDate()
         creditApplication.saveEventually()
-        let alert = UIAlertController(title: "Woohoo!", message:"You're awesome.", preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "I know.", style: .Default) { _ in })
-        self.presentViewController(alert, animated: true){}
+        alert("Woohoo!", message: "You're awesome.", actionTitle: "I know.")
         self.setCorrectView()
     }
     
     func creditApplicationBonusMissed() {
         creditApplication["missedBonusAt"] = NSDate()
         creditApplication.saveEventually()
-        let alert = UIAlertController(title: "Man...", message:"Get your shit together.", preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "Boohoo.", style: .Default) { _ in })
-        self.presentViewController(alert, animated: true){}
+        alert("Man...", message: "Get your shit together.", actionTitle: "Boohoo.")
         self.setCorrectView()
     }
     
@@ -80,6 +76,12 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
     func renderStateView(view:UIView!) {
         self.stateView.addSubview(view)
         view.frame = stateView.bounds
+    }
+    
+    func alert(title:String!, message:String!, actionTitle:String!) {
+        let a = UIAlertController(title: title, message:message, preferredStyle: .Alert)
+        a.addAction(UIAlertAction(title: actionTitle, style: .Default) { _ in })
+        self.presentViewController(a, animated: true){}
     }
     
     func setCorrectView() {
@@ -99,7 +101,15 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
             let view = bundle.loadNibNamed("CreditApplicationDeclined", owner: self, options: nil)[0] as! CreditApplicationDeclined
             view.delegate = self
             view.creditApplication = creditApplication
-            view.declinedInstructionLabel.text = "No worries. It happens all the time. You should reapply in X months."
+            let appliedAt = creditApplication["appliedAt"] as! NSDate
+            let reapplyAt = appliedAt.dateByAddingTimeInterval(180*(24*60*60))
+            let ti = reapplyAt.timeIntervalSinceNow
+            let days = Int(ceil(ti / (24*60*60)))
+            if ti <= 0 || (days < 7) {
+                view.declinedInstructionLabel.text = "You should reapply for this card!"
+            } else {
+                view.declinedInstructionLabel.text = "Sorry you got declined. It happens all the time. You should reapply in \(days) days."
+            }
             renderStateView(view)
             print("declined")
         } else if creditApplication["deliveredAt"] as? NSDate == nil {
@@ -110,14 +120,33 @@ class CreditApplicationDetailViewController: UIViewController, CreditApplication
             print("awaiting delivery")
         } else if creditApplication["hitBonusAt"] as? NSDate == nil && creditApplication["missedBonusAt"] as? NSDate == nil {
             let view = bundle.loadNibNamed("CreditApplicationDelivered", owner: self, options: nil)[0] as! CreditApplicationDelivered
-            view.bonusInstructionLabel.text = "You have 30 days left to spend $2k"
+            let offer = creditApplication["offer"] as! Offer
+            let timeLimit = offer["timeLimit"] as! Int
+            let spend = offer["spend"] as! Int
+            let approvedAt = creditApplication["approvedAt"] as! NSDate
+            let offerEndsAt = approvedAt.dateByAddingTimeInterval(NSTimeInterval(timeLimit*24*60*60))
+            let ti = offerEndsAt.timeIntervalSinceNow
+            let days = Int(ceil(ti / (24*60*60)))
+            let s = "$\(spend/1000)k"
+            if ti <= 0 {
+                view.bonusInstructionLabel.text = "You are out of time to hit your spend target of \(s). Did you hit the bonus?"
+            } else {
+                if days < 2 {
+                    view.bonusInstructionLabel.text = "You have 1 day left to spend \(s)!"
+                } else {
+                    view.bonusInstructionLabel.text = "You have \(days) days left to spend \(s)."
+                }
+            }
+            
             view.creditApplication = creditApplication
             view.delegate = self
             renderStateView(view)
             print("delivered")
         } else if creditApplication["canceledAt"] as? NSDate == nil {
             let view = bundle.loadNibNamed("CreditApplicationLive", owner: self, options: nil)[0] as! CreditApplicationLive
-            view.cancelInstructionLabel.text = "Remember to cancel this card before DATE"
+            let approvedAt = creditApplication["approvedAt"] as! NSDate
+            let feeAt = approvedAt.dateByAddingTimeInterval(360*(24*60*60))
+            view.cancelInstructionLabel.text = "Remember to cancel this card before \(feeAt)."
             view.creditApplication = creditApplication
             view.delegate = self
             renderStateView(view)
